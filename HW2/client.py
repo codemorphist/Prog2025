@@ -3,7 +3,10 @@ import logging
 
 from config import *
 
-logging.basicConfig(level=logging.INFO, format=LOGGING_FORMAT)
+logging.basicConfig(level=logging.INFO, 
+                    format=LOGGING_FORMAT,
+                    filename="client.log",
+                    filemode="w")
 logger = logging.getLogger(__name__)
 
 class FileTransferClient(SocketStream):
@@ -12,18 +15,3 @@ class FileTransferClient(SocketStream):
                          base_logger=logger)
 
 
-def test():
-    client = FileTransferClient(HOST, PORT)
-    client.connect()
-    while True:
-        data = input("Input data: ").strip()
-        if data == "close":
-            client.send("close server")
-            client.close()
-            return
-        client.send(data)
-        data = client.recv(BUF_SIZE)
-
-
-if __name__ == "__main__":
-    test()

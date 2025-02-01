@@ -13,13 +13,16 @@ class SocketStream:
         self.logging_config(base_logger)
         self.socket_config()
 
+        if self.is_server:
+            self.listen()
+
     def logging_config(self, base_logger: logging.Logger = None):
         logger_name = self.__class__.__qualname__
         if base_logger is None:
             self.logger = logging.getLogger(logger_name)
         else:
             self.logger = base_logger.getChild(logger_name)
-        self.logger.info("Starting server")
+        self.logger.info(f"Starting {self.instance}")
 
     def socket_config(self):
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -69,3 +72,21 @@ class SocketStream:
         data = conn.recv(bufsize)
         self.logger.info(f"Recived: {data}")
         return data
+
+    def send_file(self, filepath: str, bufsize: int):
+        self.logger.info(f"Starting sending file: {filepath}")
+        with open(filepath, "rb") as f:
+            while chunk := f.read(bufsize):
+                self.sendb(chunk)
+                self.logger.info(f"Sended: {len(chunk)} bytes of file")
+        self.logger.info(f"Ended sending file: {filepath}")
+
+    def recv_file(self, filepath: str, bufsize: int):
+        self.logger.info(f"Starting reciving file: {filepath}")
+        with open(filepath, "wb") as f:
+            while chunk := self.recvb(bufsize):
+                f.write(chunk)
+                self.logger.info(f"Recived: {len(chunk)} bytes of file")
+        self.logger.info(f"Ended reciving file: {filepath}")
+
+
