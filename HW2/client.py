@@ -1,7 +1,8 @@
-from socket_stream import SocketStream
+from file_transfer import FileTransfer
 import logging
 
-from config import *
+from config import LOGGING_FORMAT
+
 
 logging.basicConfig(level=logging.INFO, 
                     format=LOGGING_FORMAT,
@@ -9,7 +10,8 @@ logging.basicConfig(level=logging.INFO,
                     filemode="w")
 logger = logging.getLogger(__name__)
 
-class FileTransferClient(SocketStream):
+
+class FileTransferClient(FileTransfer):
     def __init__(self, host: str, port: int):
         super().__init__(host, port, 
                          base_logger=logger)
