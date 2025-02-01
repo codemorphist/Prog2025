@@ -30,7 +30,7 @@ class SocketStream:
 
         if self.is_server:
             self.s.bind((self.host, self.port))
-            self.logger.info(f"Listen {self.host}:{self.port}")
+            self.logger.info(f"Binded {self.instance} to {self.host}:{self.port}")
 
     def connect(self):
         self.s.connect((self.host, self.port))
