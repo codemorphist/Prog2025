@@ -29,8 +29,24 @@ def test_recive_file():
     client.close()
 
 
+def test_send_file_as():
+    client = FileTransferClient(HOST, PORT)
+    client.connect()
+    client.send_file_as("_send_file", "./client_dir/", BUF_SIZE)
+    client.close()
+
+
+def test_recv_file_as():
+    client = FileTransferClient(HOST, PORT)
+    client.connect()
+    client.recv_file_as(BUF_SIZE)
+    client.close()
+
+
 if __name__ == "__main__":
     # echo()
     # test_send_file()
-    test_recive_file()
+    # test_recive_file()
+    # test_send_file_as()
+    test_recv_file_as()
 

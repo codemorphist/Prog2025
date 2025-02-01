@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 
-class FileTranferServer(FileTransfer):
+class FileTransferServer(FileTransfer):
     def __init__(self, host: str, port: int):
         super().__init__(host, port,
                          is_server=True,
