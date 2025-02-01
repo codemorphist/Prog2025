@@ -15,17 +15,13 @@ class FileTransfer(SocketStream):
     def send_file(self, filepath: str, bufsize: int):
         self.logger.info(f"BEGIN sending file: {filepath}")
         with open(filepath, "rb") as f:
-            while chunk := f.read(bufsize):
-                self.sendb(chunk)
-                self.logger.info(f"Sended: {len(chunk)} bytes of file")
+            self.send_datab(f.read())
         self.logger.info(f"END sending file: {filepath}")
 
     def recv_file(self, filepath: str, bufsize: int):
         self.logger.info(f"BEGIN reciving file: {filepath}")
         with open(filepath, "wb") as f:
-            while chunk := self.recvb(bufsize):
-                f.write(chunk)
-                self.logger.info(f"Recived: {len(chunk)} bytes of file")
+            f.write(self.recv_datab())
         self.logger.info(f"END reciving file: {filepath}")
 
     def send_file_as(self, filepath: str, savepath: str, bufsize: int):
