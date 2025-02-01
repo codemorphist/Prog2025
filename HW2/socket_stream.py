@@ -26,11 +26,12 @@ class SocketStream:
 
     def socket_config(self):
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.logger.info(f"{self.instance} started on {self.host}:{self.port}")
 
         if self.is_server:
             self.s.bind((self.host, self.port))
             self.logger.info(f"Binded {self.instance} to {self.host}:{self.port}")
+
+        self.logger.info(f"{self.instance} started on {self.host}:{self.port}")
 
     def connect(self):
         self.s.connect((self.host, self.port))
