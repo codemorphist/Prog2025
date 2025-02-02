@@ -1,7 +1,7 @@
-from file_transfer import FileTransfer
+from .file_transfer import FileTransfer
 import logging
 
-from config import LOGGING_FORMAT
+from .config import LOGGING_FORMAT
 
 
 logging.basicConfig(level=logging.INFO, 
@@ -17,4 +17,10 @@ class FileTransferServer(FileTransfer):
                          is_server=True,
                          base_logger=logger)
 
+    def sync(self):
+        self.accept()
+
+    def kill(self):
+        self.close_conn()
+        self.close()
 

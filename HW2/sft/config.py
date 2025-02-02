@@ -1,7 +1,7 @@
 from enum import Enum, auto
 
 HOST = "localhost"
-PORT = 8008
+PORT = 8888
 
 BUF_SIZE = 1024
 
