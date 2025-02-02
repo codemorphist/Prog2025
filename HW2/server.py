@@ -27,7 +27,7 @@ if __name__ == "__main__":
     conn, addr = server.accept()
     print("Client connected")
     while True:
-        data = recv_data(server).decode()
+        data = recv_data(conn).decode()
         if data == "close":
             break
         print(data)
