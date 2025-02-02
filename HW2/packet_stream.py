@@ -56,9 +56,7 @@ def get_packets(data: bytes) -> Iterator[Packet]:
         
 
 class PacketStream:
-    def __init__(self, host: str, port: int):
-        self.host: str = host
-        self.port: int = port
+    def __init__(self):
         self._socket = socket.socket(socket.AF_INET, 
                                      socket.SOCK_STREAM)
 

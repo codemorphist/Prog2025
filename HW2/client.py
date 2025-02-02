@@ -2,11 +2,11 @@ from packet_stream import PacketStream, send_data
 
 
 class Client(PacketStream):
-    def __init__(self, host: str, port: int):
-        super().__init__(host, port)
+    def __init__(self):
+        super().__init__()
 
-    def connect(self):
-        self._socket.connect((self.host, self.port))
+    def connect(self, host: str, port: int):
+        self._socket.connect((host, port))
 
     def close(self):
         self._socket.close()
@@ -15,8 +15,8 @@ class Client(PacketStream):
 if __name__ == "__main__":
     from config import HOST, PORT
 
-    client = Client(HOST, PORT)
-    client.connect()
+    client = Client()
+    client.connect(HOST, PORT)
         
     while True:
         data = bytes(input("> "), encoding="utf-8")

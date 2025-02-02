@@ -3,8 +3,11 @@ from packet_stream import PacketStream, recv_data
 
 class Server(PacketStream):
     def __init__(self, host: str, port: int):
-        super().__init__(host, port)
-        self._socket.bind((self.host, self.port))
+        super().__init__()
+
+        self.host = host
+        self.port = port
+        self._socket.bind((host, port))
 
     def listen(self, backlog: int):
         self._socket.listen(backlog)
@@ -24,7 +27,7 @@ if __name__ == "__main__":
     conn, addr = server.accept()
     print("Client connected")
     while True:
-        data = recv_data(conn).decode()
+        data = recv_data(server).decode()
         if data == "close":
             break
         print(data)
