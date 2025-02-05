@@ -1,4 +1,4 @@
-from packet_stream import PacketStream, recv_data
+from packet_stream import PacketStream, recv_data, send_data
 
 
 class Server(PacketStream):
@@ -8,6 +8,12 @@ class Server(PacketStream):
         self.host = host
         self.port = port
         self._socket.bind((host, port))
+
+    def send_data(self, conn, data: bytes):
+        send_data(conn, data)
+
+    def recv_data(self, conn) -> bytes:
+        return recv_data(conn)
 
     def listen(self, backlog: int):
         self._socket.listen(backlog)
