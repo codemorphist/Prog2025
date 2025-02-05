@@ -27,8 +27,8 @@ class TaylorApp(tk.Tk):
         self.config_widgets()
 
     def config_window(self):
-        self.title("Remove content in ()")
-        self.geometry("500x400")
+        self.title("Calculate Taylor")
+        self.geometry("500x300")
         self.resizable(False, False)
 
     def basic_config(self):
@@ -59,14 +59,14 @@ class TaylorApp(tk.Tk):
                                 command=self.calculate)
         self.lable_res.config(font=self.font)
 
-        self.label_input_x.grid(column=0, row=1, pady=10, padx=5)
+        self.label_input_x.grid(column=0, row=1, pady=10, padx=10)
         self.entry_x.grid(column=1, row=1, pady=10)
 
-        self.label_input_e.grid(column=0, row=3, pady=10, padx=5)
+        self.label_input_e.grid(column=0, row=3, pady=10, padx=10)
         self.entry_e.grid(column=1, row=3, pady=10)
 
-        self.button_calc.grid(column=1, row=5, pady=10, padx=10)
-        self.lable_res.grid(column=1, row=7, pady=10, padx=10)
+        self.button_calc.grid(column=1, row=5, pady=10)
+        self.lable_res.grid(column=1, row=7, pady=10)
 
         self.grid_columnconfigure(1, weight=50)
 
