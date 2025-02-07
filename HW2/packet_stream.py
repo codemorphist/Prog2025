@@ -92,10 +92,10 @@ def encode(string: str) -> bytes:
 
 def send_file(socket: socket.socket, 
               filepath: str, savepath: str):
-    send_data(socket, b"INIT_FILE_TRANSFER")
-
-    if recv_data(socket) != b"READY":
-        return
+    # send_data(socket, b"INIT_FILE_TRANSFER")
+    #
+    # if recv_data(socket) != b"READY":
+    #     return
 
     send_data(socket, encode(f"SAVE_TO {savepath}"))
     with open(filepath, "rb") as f:
@@ -107,10 +107,10 @@ def send_file(socket: socket.socket,
 
 
 def recv_file(socket: socket.socket):
-    data = recv_data(socket)
-    if data != b"INIT_FILE_TRANSFER":
-        return 
-    send_data(socket, b"READY")
+    # data = recv_data(socket)
+    # if data != b"INIT_FILE_TRANSFER":
+    #     return 
+    # send_data(socket, b"READY")
 
     data = recv_data(socket).decode().split()
     savepath = data[1]
