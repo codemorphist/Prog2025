@@ -1,22 +1,24 @@
 import socket
+import os
 from collections import namedtuple
 from io import BytesIO
 import struct
 from typing import Iterator
+
 
 Header = namedtuple("Header", "size parts")
 Packet = namedtuple("Packet", "size part data")
 
 # Q: unsigned long long - Total file size to send
 # Q: unsigned long long - Parts to send
-HEADER_FMT = "<QQ"
+HEADER_FMT = ">QQ"
 HEADER_SIZE = struct.calcsize(HEADER_FMT)
 
 # Q: unsigend long long - Size of part
 # Q: unsigend long long - Current part
 # {PACKET_DATA_SIZE}s - Data to send
 PACKET_DATA_SIZE = 1024
-PACKET_FMT = f"<QQ{PACKET_DATA_SIZE}s"
+PACKET_FMT = f">QQ{PACKET_DATA_SIZE}s"
 PACKET_SIZE = struct.calcsize(PACKET_FMT)
 
 
@@ -40,7 +42,11 @@ def unpack_packet(packed_packet: bytes) -> Packet:
 
 def get_header(data: bytes) -> Header:
     data_size = len(data)
-    parts = data_size // PACKET_DATA_SIZE + 1
+    parts = data_size // PACKET_DATA_SIZE
+
+    if data_size < PACKET_DATA_SIZE:
+        parts += 1
+
     header = Header(data_size, parts)
     return header
 
@@ -53,22 +59,11 @@ def get_packets(data: bytes) -> Iterator[Packet]:
             packet = Packet(packet_size, part, packet_data)
             part += 1
             yield packet
-        
-
-class PacketStream:
-    def __init__(self):
-        self._socket = socket.socket(socket.AF_INET, 
-                                     socket.SOCK_STREAM)
-
-    def send(self, data: bytes):
-        self._socket.send(data)
-
-    def recv(self, bufsize: int) -> bytes:
-        return self._socket.recv(bufsize)
 
 
-def send_data(socket, data: bytes):
+def send_data(socket: socket.socket, data: bytes):
     # send header
+    h = get_header(data)
     header = pack_header(get_header(data))  
     socket.send(header)
 
@@ -76,18 +71,54 @@ def send_data(socket, data: bytes):
     for packet in get_packets(data):
         socket.send(pack_packet(packet))
 
-    socket.send(b"")
 
-def recv_data(socket) -> bytes:
+def recv_data(socket: socket.socket) -> bytes:
     # recv header
     header = unpack_header(socket.recv(HEADER_SIZE))
 
     # recv packets
     data = bytes()
     for _ in range(header.parts):
-        packet = unpack_packet(socket.recv(PACKET_SIZE))
+        recv_packet = socket.recv(PACKET_SIZE)
+        packet = unpack_packet(recv_packet)
         data += packet.data
 
     return data
 
+
+def encode(string: str) -> bytes:
+    return bytes(string, encoding="utf-8")
+
+
+def send_file(socket: socket.socket, 
+              filepath: str, savepath: str):
+    send_data(socket, b"INIT_FILE_TRANSFER")
+
+    if recv_data(socket) != b"READY":
+        return
+
+    send_data(socket, encode(f"SAVE_TO {savepath}"))
+    with open(filepath, "rb") as f:
+        parts = os.stat(filepath).st_size // PACKET_DATA_SIZE
+        for _ in range(parts): 
+            data = f.read(PACKET_DATA_SIZE)
+            send_data(socket, data)
+    send_data(socket, b"EOF")
+
+
+def recv_file(socket: socket.socket):
+    data = recv_data(socket)
+    if data != b"INIT_FILE_TRANSFER":
+        return 
+    send_data(socket, b"READY")
+
+    data = recv_data(socket).decode().split()
+    savepath = data[1]
+
+    with open(savepath, "wb") as f:
+        while True:
+            data = recv_data(socket)
+            if data == b"EOF":
+                break
+            f.write(data)
 
