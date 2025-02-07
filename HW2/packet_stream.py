@@ -100,7 +100,7 @@ def send_file(socket: socket.socket,
     send_data(socket, encode(f"SAVE_TO {savepath}"))
     with open(filepath, "rb") as f:
         parts = os.stat(filepath).st_size // PACKET_DATA_SIZE
-        for _ in range(parts): 
+        for _ in range(parts+1): 
             data = f.read(PACKET_DATA_SIZE)
             send_data(socket, data)
     send_data(socket, b"EOF")
