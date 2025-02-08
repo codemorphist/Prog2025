@@ -65,10 +65,13 @@ def send_data(socket: socket.socket, data: bytes):
     # send header
     header = pack_header(get_header(data))  
     socket.send(header)
+    print(f"HEADER: {len(header)}")
 
     # send packets
     for packet in get_packets(data):
-        socket.send(pack_packet(packet))
+        send_packet = pack_packet(packet) 
+        socket.send(send_packet)
+        print(f"PACKET: {len(send_packet)}")
 
 
 def recv_data(socket: socket.socket) -> bytes:
