@@ -11,14 +11,14 @@ Packet = namedtuple("Packet", "size part data")
 
 # Q: unsigned long long - Total file size to send
 # Q: unsigned long long - Parts to send
-HEADER_FMT = ">QQ"
+HEADER_FMT = "!QQ"
 HEADER_SIZE = struct.calcsize(HEADER_FMT)
 
 # Q: unsigend long long - Size of part
 # Q: unsigend long long - Current part
 # {PACKET_DATA_SIZE}s - Data to send
 PACKET_DATA_SIZE = 1024
-PACKET_FMT = f">QQ{PACKET_DATA_SIZE}s"
+PACKET_FMT = f"!QQ{PACKET_DATA_SIZE}s"
 PACKET_SIZE = struct.calcsize(PACKET_FMT)
 
 
@@ -63,7 +63,6 @@ def get_packets(data: bytes) -> Iterator[Packet]:
 
 def send_data(socket: socket.socket, data: bytes):
     # send header
-    h = get_header(data)
     header = pack_header(get_header(data))  
     socket.send(header)
 
@@ -74,12 +73,16 @@ def send_data(socket: socket.socket, data: bytes):
 
 def recv_data(socket: socket.socket) -> bytes:
     # recv header
-    header = unpack_header(socket.recv(HEADER_SIZE))
+    recv_header = socket.recv(HEADER_SIZE)
+    header = unpack_header(recv_header)
+    print(f"HEADER: {len(recv_header)}")
+
 
     # recv packets
     data = bytes()
     for _ in range(header.parts):
         recv_packet = socket.recv(PACKET_SIZE)
+        print(f"PACKET: {len(recv_packet)}")
         packet = unpack_packet(recv_packet)
         data += packet.data
 
