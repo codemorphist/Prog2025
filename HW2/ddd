@@ -3,8 +3,6 @@ from packet_stream import encode
 from packet_stream import send_file, recv_file
 from packet_stream import send_data, recv_data
 import argparse
-import os
-
 
 parser = argparse.ArgumentParser(prog="transfer.py",
                                  description="Simple CLI app to send and recive"
@@ -59,13 +57,12 @@ def transfer_file(s: socket.socket,
     match op_type:
         case "send":
             print(f"-- START TRANFER FILE: {filepath}")
-            print(f"-- FILE SIZE: {os.stat(filepath).st_size}")
             send_file(s, filepath, savepath)
+            print("-- END")
         case "recv":
             print("-- START RECIVING FILE")
-            path = recv_file(s)
-            print(f"-- RECIVED FILE: {path}")
-            print(f"-- RECIVED FILE SIZE: {os.stat(path).st_size}")
+            recv_file(s)
+            print("-- END")
 
 
 def transfer_data(s: socket.socket,
@@ -75,9 +72,11 @@ def transfer_data(s: socket.socket,
         case "send":
             print(f"-- START SENDING DATA: {data}")
             send_data(s, encode(data))
+            print("-- END")
         case "recv":
             data = recv_data(s).decode()
             print(f"-- RECIVED: `{data}`")
+            print("-- END")
 
 
 def main():
@@ -107,7 +106,6 @@ def main():
     conn.close()
     if args.conn_type == "server":
         s.close()
-    print("-- END CONNECTION")
     
 
 if __name__ == "__main__":
