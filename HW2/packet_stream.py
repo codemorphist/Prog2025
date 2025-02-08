@@ -76,7 +76,12 @@ def send_data(socket: socket.socket, data: bytes):
 
 def recv_data(socket: socket.socket) -> bytes:
     # recv header
-    recv_header = socket.recv(HEADER_SIZE)
+    recv_header = b""
+    while len(recv_header) < HEADER_SIZE:
+        part = socket.recv(HEADER_SIZE - len(recv_header))
+        if not part:
+            break
+        recv_header += part
     header = unpack_header(recv_header)
     print(f"HEADER: {len(recv_header)}")
 
@@ -87,7 +92,7 @@ def recv_data(socket: socket.socket) -> bytes:
         recv_packet = b""
         while len(recv_packet) < PACKET_SIZE:
             part = socket.recv(PACKET_SIZE - len(recv_packet))
-            if not part:  # Connection closed
+            if not part:
                 break
             recv_packet += part
         
