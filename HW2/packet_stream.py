@@ -36,7 +36,7 @@ def pack_packet(packet: Packet):
 
 def unpack_packet(packed_packet: bytes) -> Packet:
     packet = Packet._make(struct.unpack(PACKET_FMT, packed_packet))
-    data = packet.data.rstrip(b"\x00")
+    data = packet.data[:packet.size]
     return Packet(packet.size, packet.part, data)
 
 
@@ -92,33 +92,28 @@ def encode(string: str) -> bytes:
 
 def send_file(socket: socket.socket, 
               filepath: str, savepath: str):
-    # send_data(socket, b"INIT_FILE_TRANSFER")
-    #
-    # if recv_data(socket) != b"READY":
-    #     return
-
     send_data(socket, encode(f"SAVE_TO {savepath}"))
+
+    sended_size = 0
     with open(filepath, "rb") as f:
-        parts = os.stat(filepath).st_size // PACKET_DATA_SIZE
-        for _ in range(parts+1): 
-            data = f.read(PACKET_DATA_SIZE)
+        while data := f.read(1024):
             send_data(socket, data)
+            sended_size += len(data)
     send_data(socket, b"EOF")
+    print(sended_size)
 
 
 def recv_file(socket: socket.socket):
-    # data = recv_data(socket)
-    # if data != b"INIT_FILE_TRANSFER":
-    #     return 
-    # send_data(socket, b"READY")
-
     data = recv_data(socket).decode().split()
     savepath = data[1]
 
+    recived_size = 0
     with open(savepath, "wb") as f:
         while True:
             data = recv_data(socket)
             if data == b"EOF":
                 break
+            recived_size += len(data)
             f.write(data)
+    print(recived_size)
 
