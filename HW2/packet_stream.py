@@ -64,13 +64,13 @@ def get_packets(data: bytes) -> Iterator[Packet]:
 def send_data(socket: socket.socket, data: bytes):
     # send header
     header = pack_header(get_header(data))  
-    socket.send(header)
+    socket.sendall(header)
     print(f"HEADER: {len(header)}")
 
     # send packets
     for packet in get_packets(data):
         send_packet = pack_packet(packet) 
-        socket.send(send_packet)
+        socket.sendall(send_packet)
         print(f"PACKET: {len(send_packet)}")
 
 
@@ -84,7 +84,13 @@ def recv_data(socket: socket.socket) -> bytes:
     # recv packets
     data = bytes()
     for _ in range(header.parts):
-        recv_packet = socket.recv(PACKET_SIZE)
+        recv_packet = b""
+        while len(recv_packet) < PACKET_SIZE:
+            part = socket.recv(PACKET_SIZE - len(recv_packet))
+            if not part:  # Connection closed
+                break
+            recv_packet += part
+        
         print(f"PACKET: {len(recv_packet)}")
         packet = unpack_packet(recv_packet)
         data += packet.data
