@@ -3,23 +3,33 @@ import re
 import requests
 import openpyxl
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 
 def get_html(city: str) -> str:
-    SYNOPTIC_URL = "https://sinoptik.ua"
-    url = f"{SYNOPTIC_URL}/погода-{city.lower()}" 
+    METEOPROG_URL = "https://www.meteoprog.com/ua/weather/"
+    url = f"{METEOPROG_URL}/{city.title()}" 
     responce = requests.get(url) 
+    if responce.status_code == 404:
+        return ""
     return responce.text
 
 
-def get_cur_temp(html: str) -> str:
-    CUR_TEMP_REGEX = r"<p class=\"R1ENpvZz\">\+?(\-?[0-9]*).*?</p>"
-    cur_temp = re.findall(CUR_TEMP_REGEX, html)
- 
-    if cur_temp:
-        return cur_temp[0]
-    else:
-        return ""
+def get_soup(html: str) -> BeautifulSoup:
+    soup = BeautifulSoup(html, "lxml")
+    return soup
+
+
+def parse_temp(s: str) -> str:
+    TEMP_REGEX = r"\+?(-?[0-9]*)°"
+    temp = re.findall(TEMP_REGEX, s)
+    return temp[0] if len(temp) else ""
+
+
+def get_cur_temp(soup: BeautifulSoup) -> str:
+    cur_temp_span = soup.find_all("span", {"dir": "ltr"}, limit=1)[0]
+    cur_temp = parse_temp(cur_temp_span.text)
+    return cur_temp
 
 
 def resize_list(lst: list, to_size: int, value) -> list:
@@ -28,19 +38,35 @@ def resize_list(lst: list, to_size: int, value) -> list:
     lst.extend([value] * (to_size - len(lst)))
     return lst
 
-    
-def get_min_max_temp(html: str) -> list[str]:
-    MIN_MAX_TEMP_REGEX = r"<div class=\"\+Ncy59Ya\">.*?<p>\+?(\-?[0-9]*).*?<\/p>"
-    temps = re.findall(MIN_MAX_TEMP_REGEX, html)
 
+def zip_lists(lst1: list, lst2: list) -> list:
+    return [item for pair in zip(lst1, lst2) for item in pair]
+
+
+def get_h4_text(tag) -> str:
+    h4 = tag.find("h4")
+    return h4.text if h4 else "" 
+
+
+def get_min_max_temp(soup: BeautifulSoup) -> list[str]:
+    max_temp_div = soup.find_all("div", {"class": "temperature-max"})
+    min_temp_div = soup.find_all("div", {"class": "temperature-min"})
+
+    max_temp_val = list(map(get_h4_text, max_temp_div))
+    min_temp_val = list(map(get_h4_text, min_temp_div))
+
+    max_temps = list(map(parse_temp, max_temp_val))
+    min_temps = list(map(parse_temp, min_temp_val))
+
+    temps = zip_lists(max_temps, min_temps)
     return resize_list(temps, 6 * 2, "")
 
 
-def parse_temp(city: str) -> list[str]:
+def get_temp(city: str) -> list[str]:
     html = get_html(city)
-    cur_temp = get_cur_temp(html)
-    five_days_temp  = get_min_max_temp(html)
-
+    soup = get_soup(html)
+    cur_temp = get_cur_temp(soup)
+    five_days_temp  = get_min_max_temp(soup)
     return [cur_temp, *five_days_temp]
 
 
@@ -82,15 +108,15 @@ def format_city_name(city: str) -> str:
     return city.title()
 
 
-def save_synoptic_stats(city: str, filename: str = "temp_stat_synoptik.xlsx"):
+def save_synoptic_stats(city: str, filename: str = "temp_stat_meteoprog.xlsx"):
     cur_date = get_cur_date()   
-    data = parse_temp(city)
+    data = get_temp(city)
     city = format_city_name(city)
 
     update_xlsx(filename, city, [cur_date, *data])
     
 
 if __name__ == "__main__":
-    save_synoptic_stats("киев")
-    save_synoptic_stats("львов")
-    save_synoptic_stats("чернигов")
+    save_synoptic_stats("Kyiv")
+    save_synoptic_stats("Lviv")
+    save_synoptic_stats("Chernigiv")
