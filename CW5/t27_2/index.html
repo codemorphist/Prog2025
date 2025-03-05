@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Currency converter</title>
+    </head>
+    <body>
+        <form method="POST" action="/cgi-bin/convert.py">
+            <input type="number" name="amount" step="0.01" value="100.00">
+            <select name="currency">
+                <option value="USD/EUR" seleted>USD/EUR</option>
+                <option value="EUR/USD">EUR/USD</option>
+                <option value="USD/UAH">USD/UAH</option>
+            </select>
+            <input type="submit" value="Convert"> 
+        </form> 
+    </body>
+</html>
