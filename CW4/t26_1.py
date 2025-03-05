@@ -1,6 +1,5 @@
 import re
-from urllib.request import urlopen
-from urllib.parse import urljoin, quote
+import requests
 
 
 SYNOPTIC_URL = "https://sinoptik.ua"
@@ -9,10 +8,8 @@ SYNOPTIC_CITY = "Львов"
 
 def get_html() -> str:
     url = f"{SYNOPTIC_URL}/погода-{SYNOPTIC_CITY}" 
-    url = quote(url, safe=":/-", encoding="utf-8")
-    print(url)
-    responce = urlopen(url)
-    return responce.read().decode()
+    responce = requests.get(url) 
+    return responce.text
 
 
 def regex_parse():
