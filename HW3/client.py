@@ -3,9 +3,9 @@ from config import HOST, PORT
 
 
 class Client():
-    def __init__(self):
+    def __init__(self, host: str, port: int):
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server.connect((HOST, PORT))
+        self.server.connect((host, port))
 
     def send_message(self, message):
         self.server.send(message.encode())
@@ -18,7 +18,7 @@ class Client():
 
 
 if __name__ == "__main__":
-    client = Client()
+    client = Client(HOST, PORT)
     gretting = client.recv_message()
     second = gretting == "You second"
     if second:
