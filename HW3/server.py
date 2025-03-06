@@ -29,6 +29,5 @@ while True:
         m = bob[0].recv(2048)
         alise[0].send(bytes(f"[BOB] {m}", encoding="utf-8"))
 
-
 conn.close()
 server.close()
