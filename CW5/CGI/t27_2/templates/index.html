@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Currency converter</title>
+    </head>
+    <body>
+        <form method="POST" action="/cgi-bin/convert.py">
+            <input type="number" name="amount" step="0.01" value="100.00">
+            <select name="currency">
+                {%- for cur in currency %}
+                <option value="{{ cur }}">{{ cur }}</option>
+                {%- endfor %}
+            </select>
+            <input type="submit" value="Convert"> 
+        </form> 
+
+        <p><b>{{ result }}</b></p>
+    </body>
+</html>
