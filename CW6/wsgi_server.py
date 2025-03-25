@@ -5,6 +5,7 @@ import wordcount
 
 def application(environ, start_response):
     path = environ.get("PATH_INFO", "").lstrip("/")
+    print(path)
     if path == "":
         with open("index.html", "r") as html:
             body = html.read()    
@@ -19,8 +20,11 @@ def application(environ, start_response):
             counts = wordcount.wordcount(html)
             body = wordcount.generate_wordcount_json(counts)
         start_response("200 OK", [("Content-Type", "application/json; charset=utf-8")])
+    elif path.startswith("static/"):
+        with open(path, "r") as f:
+            body = f.read()
+        start_response("200 OK", [("Content-Type", "text/css")])
     else:
-        # якщо команда невідома, то виникла помилка
         start_response("404 NOT FOUND", [("Content-Type", "text/plain")])
         body = "[404] Page not found"
     return [bytes(body, encoding="utf-8")]
@@ -28,5 +32,5 @@ def application(environ, start_response):
 
 if __name__ == "__main__":
     print("=== Local WSGI webserver ===")
-    httpd = make_server("localhost", 8000, application)
-    httpd.serve_forever()
+    with make_server("localhost", 8000, application) as httpd:
+        httpd.serve_forever()

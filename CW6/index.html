@@ -4,12 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>GET URL JSON</title>
+        <link href="/static/reset.css" rel="stylesheet">
+        <link href="/static/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <form method="POST" action="/get-json">
-                <input type="url" name="url" required>
-                <input type="submit" value="Get JSON">
+            <h1 class="container-heading">Calculate word count</h1>
+            <form class="form" method="POST" action="/get-json">
+                <input class="input-url" type="url" name="url" placeholder="Input url:" required>
+                <input class="submit-button" type="submit" value="Get JSON">
             </form>
         </div>
     </body>

@@ -1,0 +1,39 @@
+.container {
+    width: 256px;
+    height: 128px;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+
+    border: 3px solid blue;
+    padding: 16px
+}
+
+.container-heading {
+    font-size: 36px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.input-url {
+    margin-top: 16px;
+    height: 24px;
+}
+
+.submit-button {
+    margin-top: 10px;
+    height: 32px;
+}
