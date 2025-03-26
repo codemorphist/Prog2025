@@ -1,5 +1,6 @@
 import json
 import requests
+import xml.etree.ElementTree as ET
 
 
 def get_html(url: str) -> str:
@@ -37,8 +38,19 @@ def generate_wordcount_json(counts: dict[str, int]) -> str:
     return json.dumps(counts_json)
 
 
+def generate_wordcount_xml(counts: dict[str, int]) -> str:
+    root = ET.Element("words")
+
+    for word, count in counts.items():
+        word_elem = ET.SubElement(root, "word", {"count": str(count)})
+        word_elem.text = word
+
+    xml = ET.tostring(root).decode() 
+    return xml
+
+
 if __name__ == "__main__":
     url = input("Input url: ")
     html = get_html(url) 
     counts = wordcount(html)
-    print(generate_wordcount_json(counts))
+    print(generate_wordcount_xml(counts))

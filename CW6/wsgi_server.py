@@ -5,12 +5,11 @@ import wordcount
 
 def application(environ, start_response):
     path = environ.get("PATH_INFO", "").lstrip("/")
-    print(path)
     if path == "":
         with open("index.html", "r") as html:
             body = html.read()    
         start_response("200 OK", [("Content-Type", "text/html; charset=utf-8")])
-    elif path == "get-json":
+    elif path == "count-words":
         form = cgi.FieldStorage(fp=environ["wsgi.input"], 
                                 environ=environ)
         body = ""
@@ -18,8 +17,17 @@ def application(environ, start_response):
             url = form["url"].value
             html = wordcount.get_html(url)
             counts = wordcount.wordcount(html)
+        if "get-json" in form:
+            mimetype = "application/json"
             body = wordcount.generate_wordcount_json(counts)
-        start_response("200 OK", [("Content-Type", "application/json; charset=utf-8")])
+        elif "get-xml" in form:
+            print("XML")
+            mimetype = "text/xml"
+            body = wordcount.generate_wordcount_xml(counts)
+        else:
+            mimetype = "text/plain"
+            body = "Invalid format type"
+        start_response("200 OK", [("Content-Type", f"{mimetype}; charset=utf-8")])
     elif path.startswith("static/"):
         with open(path, "r") as f:
             body = f.read()
@@ -32,5 +40,5 @@ def application(environ, start_response):
 
 if __name__ == "__main__":
     print("=== Local WSGI webserver ===")
-    with make_server("localhost", 8000, application) as httpd:
+    with make_server("0.0.0.0", 8000, application) as httpd:
         httpd.serve_forever()

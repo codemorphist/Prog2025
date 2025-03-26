@@ -11,7 +11,7 @@
     margin: auto;
 
     border: 3px solid blue;
-    padding: 16px
+    padding: 18px
 }
 
 .container-heading {
@@ -33,7 +33,17 @@
     height: 24px;
 }
 
+.submit-buttons {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .submit-button {
-    margin-top: 10px;
     height: 32px;
+    width: 120px;
 }
