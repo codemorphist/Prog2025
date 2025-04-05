@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CURRENCY CONVERTER</title>
+        <link href="/static/reset.css" rel="stylesheet">
+        <link href="/static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" method="POST" action="/convert-currency">
+                <h1 class="form-heading">Currency converter</h1>
+                <div class="form-data">
+                    <input class="input-count" type="number" name="amount" step="0.01" value="100.00">
+                    <select class="select-currency" name="currency">
+                        {%- for cur in currency %}
+                        <option value="{{ cur }}">{{ cur }}</option>
+                        {%- endfor %}
+                    </select>
+                </div>
+                <input class="submit-button" type="submit" value="Convert">
+            </form> 
+
+            {% if result %}
+            <div class="result placeholder shadow">
+                <p>{{ result }}</p>
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div class="error placeholder shadow">
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
