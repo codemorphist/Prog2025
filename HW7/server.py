@@ -23,7 +23,7 @@ def application(environ, start_response):
         amount = float(form["amount"].value)
         new_amount = db.convert(amount, cur)
 
-        result = f"{amount:.2f} {from_cur} -> {new_amount:.2f} {to_cur}"
+        result = f"{amount:.2f} {from_cur} => {new_amount:.2f} {to_cur}"
         body = index.render(currency=db.get_currency(), result=result)
         start_response("200 OK", [("Content-Type", "text/html; charset=utf-8")])
     elif path.startswith("static/"):
