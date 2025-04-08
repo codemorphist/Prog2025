@@ -7,10 +7,12 @@ import urllib.parse
 
 from app.utils import StatusCode
 from app.responce import HTMLResponce
+from app.errors import responce_404, responce_500
 
 from app.urls import urlpatterns, compare_pattern
 
 import traceback
+
 
 
 def application(environ, start_response):
@@ -32,20 +34,15 @@ def application(environ, start_response):
         params = {key: value[0] for key, value in parsed_data.items()}
 
     # Default responce 404 HTTP Error
-    status, headers, body = HTMLResponce("404.html", 
-                                         status=StatusCode.S404,
-                                         context={"path": path})
+    status, headers, body = responce_404(path)
 
     for pattern, view in urlpatterns:
         if compare_pattern(path, pattern):
             try: # If patter found generate responce
                 status, headers, body = view(path, params)
             except Exception as e: # If Exception return 500 HTTP error
-                status, headers, body = HTMLResponce(
-                        "500.html", 
-                        status=StatusCode.S500,
-                        context={"error": traceback.format_exc()}
-                    )
+                error = traceback.format_exc()
+                status, headers, body = responce_500(error)      
             finally:
                 break
 

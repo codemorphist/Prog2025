@@ -11,6 +11,7 @@ import app.db as db
 
 
 def index(path, params):
+    raise Exception("test exception")
     return HTMLResponce("index.html")
 
 

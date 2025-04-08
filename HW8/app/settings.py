@@ -4,6 +4,9 @@ This file contains setting for app
 
 import os 
 
+# Debug 
+DEBUG = True 
+
 # Base directory path
 BASE_DIR = "." 
 
