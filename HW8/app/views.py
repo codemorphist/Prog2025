@@ -1,8 +1,9 @@
-from http_utils import StatusCode
-from responce import HTMLResponce, HttpResponce
-from templates import render
+from app.utils import StatusCode
+from app.utils import contenttype_html
+from app.responce import HTMLResponce, HttpResponce
+from app.templates import render
 
-import json_db
+import app.db as db
 
 
 def index(path, params):
@@ -18,10 +19,11 @@ def add(path, params):
             "price": float(params["price"]),
             "age_range": [params["age-from"], params["age-to"]]
         }
-        json_db.insert(toy)
+        db.insert(toy)
+        db.save()
         return HTMLResponce("added.html", context={"toy": toy})
 
 
 def view(path, params):
-    toys = json_db.get_toys()
+    toys = db.get_toys()
     return HTMLResponce("view.html", context={"toys": toys})

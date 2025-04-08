@@ -23,6 +23,22 @@
                 14,
                 16
             ]
+        },
+        {
+            "name": "fasddsf",
+            "price": 100.0,
+            "age_range": [
+                "10",
+                "90"
+            ]
+        },
+        {
+            "name": "fadsfs",
+            "price": 70.45,
+            "age_range": [
+                "10",
+                "90"
+            ]
         }
     ]
 }

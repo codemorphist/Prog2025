@@ -1,10 +1,10 @@
-import api
+import app.views as views
 
 # List with url patterns
 urlpatterns = [
-    ("", api.index),
-    ("add/", api.add),
-    ("view/", api.view)
+    ("", views.index),
+    ("add/", views.add),
+    ("view/", views.view)
 ]
 
 

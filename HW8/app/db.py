@@ -1,10 +1,9 @@
 import os
 import json
 
+from app.settings import DB_PATH
 
-DB_DIR = "."
-DB_NAME = "db.json"
-DB_PATH = os.path.join(DB_DIR, DB_NAME)
+
 DB = None
 
 
@@ -27,7 +26,7 @@ def load():
 
 
 def save():
-    with open(DB_NAME, "w") as f:
+    with open(DB_PATH, "w") as f:
         f.write(json.dumps(DB,indent=4))
 
 
@@ -45,6 +44,7 @@ def insert(obj):
     if DB is None:
         raise ValueError("Open DB before use it")
     DB["toys"].append(obj)
+    save()
 
 
 def insert_toy(name: str, price: float, age_range: tuple[int, int]):

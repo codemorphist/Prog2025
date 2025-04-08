@@ -1,15 +1,24 @@
-# Simple WEB Framework
+# Simple Web Framework
+
 ```
-├── server.py       <<<- Server (run this)
-├── application.py  <--- WSGI Application
-├── urls.py         <--- Routes for requests 
-├── api.py          <--- View for requests 
-├── http_utils.py   <--- Utils for HTTP responce
-├── responce.py     <--- Define Responce
-├── templates.py    <--- Module for work with templates
-└── templates       <--- Templates dir
-    ├── 404.html     
-    └── ...    
+.
+├── runserver.py        <-- Script that run server
+├── db.json             <-- Database in JSON format
+├── app                 <-- Simple Web Framework module
+│   ├── settings.py     <= Setting for app
+│   ├── wsgi.py         <= WSGI application
+│   ├── urls.py         <= URL routes
+│   ├── views.py        <= Views for routes
+│   ├── db.py           <= Module for work with DB
+│   ├── templates.py    <= Module for work with templates
+│   ├── responce.py     <= Responce classes
+│   └── utils.py        <= Utils 
+└── templates           <-- Templates folder
+    ├── 404.html        
+    ├── added.html
+    ├── add.html
+    ├── index.html
+    └── view.html
 ```
 
 # Task T28.4

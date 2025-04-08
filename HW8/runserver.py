@@ -1,6 +1,6 @@
 from wsgiref.simple_server import make_server
 
-from application import application
+from app.wsgi import application
 
 
 if __name__ == "__main__":

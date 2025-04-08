@@ -1,11 +1,9 @@
 import urllib.parse
 
-from http_utils import StatusCode
-from responce import HTMLResponce
+from app.utils import StatusCode
+from app.responce import HTMLResponce
 
-from urls import urlpatterns, compare_pattern
-
-from wsgiref.headers import Headers
+from app.urls import urlpatterns, compare_pattern
 
 
 def application(environ, start_response):
@@ -34,6 +32,6 @@ def application(environ, start_response):
             status, headers, body = view(path, params)
             break
 
-    headers = [*headers] # ? BUG AND HARDCODE
-    start_response(status.value, headers)
+    # headers = [*headers] # ? BUG AND HARDCODE
+    start_response(status, headers)
     return [bytes(body, encoding="utf-8")]

@@ -1,7 +1,7 @@
-from http_utils import StatusCode, contenttype_html
 from typing import List, TypeAlias, Tuple, AnyStr, Iterator
 
-from templates import render
+from app.utils import StatusCode, contenttype_html
+from app.templates import render
 
 Responce: TypeAlias = Tuple[StatusCode, AnyStr]
 Headers: TypeAlias = List[Tuple[AnyStr, AnyStr]]
@@ -17,8 +17,8 @@ class HttpResponce:
         self.headers = headers
 
     def __iter__(self) -> Iterator:
-        yield self.status
-        yield self.headers
+        yield self.status.value
+        yield [*self.headers]
         yield self.body
 
 
