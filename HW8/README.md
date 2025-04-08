@@ -30,9 +30,9 @@ Toys DB Structure:
 {
     "toys": [
         {
-            "name": "str",               // toy name
-            "price": "float"             // toy price
-            "age-range": ["int", "int"]  // age range for toy
+            "name": "str",               
+            "price": "float"             
+            "age-range": ["int", "int"] 
         },
     ]
 }
