@@ -1,0 +1,12 @@
+# Simple WEB Framework
+
+├── server.py       <<-- Server (run this)
+├── application.py  <--- WSGI Application
+├── urls.py         <--- Routes for requests 
+├── api.py          <--- View for requests 
+├── http_utils.py   <--- Utils for HTTP responce
+├── responce.py     <--- Define Responce
+├── templates.py    <--- Module for work with templates
+└── templates       <--- Templates dir
+    └── 404.html    
+
