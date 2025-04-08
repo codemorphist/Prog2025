@@ -12,7 +12,7 @@ from app.utils import path
 
 # List with url patterns
 urlpatterns = [
-    path("", views.index),
+    path("", views.index, name="index"),
     path("add-toy/", views.add_toy),
     path("delete-toy/<int:toy_id>/", views.delete_toy),
     path("view-toys/", views.view_toys),

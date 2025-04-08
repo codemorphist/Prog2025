@@ -14,7 +14,7 @@ import traceback
 
 def application(environ, start_response):
     # Get request path
-    path = environ.get("PATH_INFO", "").lstrip("/")
+    path = environ.get("PATH_INFO", "")
     
     length = environ.get('CONTENT_LENGTH', '0')
     try:

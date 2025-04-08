@@ -4,6 +4,8 @@ based on Jinja2 package
 """
 
 from app.settings import TEMPLATE_DIR
+from app.utils import url
+
 from jinja2 import Environment, FileSystemLoader, Template
 
 jinja_env = Environment(loader = FileSystemLoader(TEMPLATE_DIR))
@@ -15,4 +17,5 @@ def get_template(template: str) -> Template:
 
 def render(template: str, **kwargs):
     temp = get_template(template)
+    kwargs = {"tag_url": url, **kwargs}
     return temp.render(**kwargs)
