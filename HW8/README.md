@@ -15,6 +15,7 @@
 │   └── utils.py        <= Utils 
 └── templates           <-- Templates folder
     ├── 404.html        
+    ├── 500.html        
     ├── added.html
     ├── add.html
     ├── index.html
@@ -29,9 +30,9 @@ Toys DB Structure:
 {
     "toys": [
         {
-            "name": str,             // toy name
-            "price": str             // toy price
-            "age-range": [int, int]  // age range for toy
+            "name": "str",               // toy name
+            "price": "float"             // toy price
+            "age-range": ["int", "int"]  // age range for toy
         },
     ]
 }
