@@ -1,6 +1,6 @@
 # Simple WEB Framework
-
-├── server.py       <<-- Server (run this)
+```
+├── server.py       <<<- Server (run this)
 ├── application.py  <--- WSGI Application
 ├── urls.py         <--- Routes for requests 
 ├── api.py          <--- View for requests 
@@ -8,7 +8,9 @@
 ├── responce.py     <--- Define Responce
 ├── templates.py    <--- Module for work with templates
 └── templates       <--- Templates dir
-    └── 404.html    
+    ├── 404.html     
+    └── ...    
+```
 
 # Task T28.4
 
@@ -16,12 +18,12 @@ Toys DB Structure:
 
 ```json
 {
-    ...
-    {
-        name: str,             // toy name
-        price: str             // toy price
-        age-range: [int, int]  // age range for toy
-    },
-    ...
+    "toys": [
+        {
+            name: str,             // toy name
+            price: str             // toy price
+            age-range: [int, int]  // age range for toy
+        },
+    ]
 }
 ```

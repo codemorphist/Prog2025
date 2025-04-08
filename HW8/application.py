@@ -12,6 +12,19 @@ def application(environ, start_response):
     query_string = environ.get("QUERY_STRING", "")
     params = urllib.parse.parse_qs(query_string)
 
+    length = environ.get('CONTENT_LENGTH', '0')
+    try:
+        length = int(length)
+    except ValueError:
+        length = 0
+
+    raw_post_data = environ["wsgi.input"].read(length) if length > 1 else b""
+
+    params = {}
+    if raw_post_data:
+        parsed_data = urllib.parse.parse_qs(raw_post_data.decode("utf-8"))
+        params = {key: value[0] for key, value in parsed_data.items()}
+
     for pattern, view in urlpatterns:
         if compare_pattern(path, pattern):
             status, headers, body = view(path, params)

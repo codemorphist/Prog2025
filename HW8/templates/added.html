@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Added toy {{ toy["name"] }}</title>
+    </head>
+    <body>
+        <h1><a href="/">Home</a></h1>
+        <hr>
+        <h2>Succesfuly added toy {{ toy["name"] }}</h2>
+        <ul>
+            <li><b>Name:</b> {{ toy["name"] }}</li>
+            <li><b>Price:</b> {{ toy["price"] }}₴</li>
+            <li><b>Age range:</b> {{ toy["age_range"][0] }}-{{ toy["age_range"][1] }}</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "toys": [
+        {
+            "name": "Ball",
+            "price": 10.44,
+            "age_range": [
+                0,
+                16
+            ]
+        },
+        {
+            "name": "Rocket",
+            "price": 99.99,
+            "age_range": [
+                14,
+                16
+            ]
+        },
+        {
+            "name": "Gun",
+            "price": 499.99,
+            "age_range": [
+                14,
+                16
+            ]
+        }
+    ]
+}

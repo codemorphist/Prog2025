@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Toys List</title>
+    </head>
+    <body>
+        <h1><a href="/">Home</a></h1>
+        <hr>
+        <h2>Toys</h2>
+        <ul>
+        {% for toy in toys %} 
+            <li>
+                <ul>
+                    <li><b>Name:</b> {{ toy["name"] }}</li>
+                    <li><b>Price:</b> {{ toy["price"] }}₴</li>
+                    <li><b>Age range:</b> {{ toy["age_range"][0] }}-{{ toy["age_range"][1] }}</li>
+                </ul>
+            </li> 
+        {% endfor %}
+        </ul>
+    </body>
+</html>
