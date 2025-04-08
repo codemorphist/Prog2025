@@ -56,8 +56,15 @@ def insert_toy(name: str, price: float, age_range: tuple[int, int]):
     insert(toy)
 
 
+def delete_toy(id: int) -> dict:
+    if DB is None:
+        raise Exception("DB not loaded")
+    return DB["toys"].pop(id)
+
+
 def get_toys() -> list[dict]:
-    return DB["toys"]
+    return DB["toys"] if DB is not None else []
 
 
+# Load DB when module using
 load()

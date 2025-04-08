@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>400 INVALID REQUEST</title>
+    </head>
+    <body>
+        <h1>400 INVALID REQUEST</h1>
+        {% if error %} {# if defined error show it #}
+        <p><b>Error:</b> {{ error }}</p>
+        {% endif %}
+        <hr>
+    </body>
+</html>

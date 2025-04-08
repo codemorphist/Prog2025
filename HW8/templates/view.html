@@ -15,6 +15,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Age range</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +23,8 @@
                <tr>
                    <td>{{ toy["name"] }}</td>
                    <td>{{ toy["price"] }}₴</td>
-                   <td>{{ toy["age_range"][0] }}-{{ toy["age_range"][1] }}</td>
+                   <td>{{ toy["age"] }}</td>
+                   <td><a href="/delete-toy/{{ loop.index - 1}}">Delete</a></td>
                </tr>
                {% endfor %}
             </tbody>

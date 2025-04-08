@@ -9,21 +9,17 @@
         <h1><a href="/">Home</a></h1>
         <hr>
         <h2>Add toy form</h2>
-        <form method="POST" action="/add">
+        <form method="POST" action="/add-toy">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name">
             <br>
 
             <label for="price">Price:</label>
             <input type="number" id="price" name="price" step="0.01" value="100.00">
             <br>
 
-            <label for="from">Age From:</label>
-            <input type="number" id="price" name="age-from" step="1" max="18" min="0" value="0">
-            <br>
-
-            <label for="to">Age To:</label>
-            <input type="number" id="price" name="age-to" step="1" max="18" min="0" value="0">
+            <label for="from">Age:</label>
+            <input type="number" id="price" name="age" step="1" max="18" min="0" value="0">
             <br>
 
             <input type="submit" value="Add toy"> 

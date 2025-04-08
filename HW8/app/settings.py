@@ -4,16 +4,16 @@ This file contains setting for app
 
 import os 
 
-# Debug 
+# Debug (if enabled show additional info in errors)
 DEBUG = True 
 
 # Base directory path
+# Default dir where runserver.py
 BASE_DIR = "." 
 
 # Templates settings
 TEMPLATE_DIR = "templates/"
 TEMPLATES_DIR = os.path.join(BASE_DIR, TEMPLATE_DIR)
-
 
 # Database settings
 DB_DIR = "."

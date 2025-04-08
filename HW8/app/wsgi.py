@@ -5,11 +5,8 @@ WSGI application
 
 import urllib.parse
 
-from app.utils import StatusCode
-from app.responce import HTMLResponce
 from app.errors import responce_404, responce_500
-
-from app.urls import urlpatterns, compare_pattern
+from app.urls import urlpatterns
 
 import traceback
 
@@ -28,18 +25,19 @@ def application(environ, start_response):
     raw_post_data = environ["wsgi.input"].read(length) if length > 1 else b""
 
     # Parse params form from (if exist)
-    params = {}
+    data = {}
     if raw_post_data:
         parsed_data = urllib.parse.parse_qs(raw_post_data.decode("utf-8"))
-        params = {key: value[0] for key, value in parsed_data.items()}
+        data = {key: value[0] for key, value in parsed_data.items()}
 
     # Default responce 404 HTTP Error
     status, headers, body = responce_404(path)
 
-    for pattern, view in urlpatterns:
-        if compare_pattern(path, pattern):
+    for pattern in urlpatterns:
+        matched, params = pattern.parse(path) 
+        if matched:
             try: # If patter found generate responce
-                status, headers, body = view(path, params)
+                status, headers, body = pattern.view(path, data, **params)
             except Exception as e: # If Exception return 500 HTTP error
                 error = traceback.format_exc()
                 status, headers, body = responce_500(error)      

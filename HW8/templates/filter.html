@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Filter Toys by age</title>
+    </head>
+    <body>
+        <h1><a href="/">Home</a></h1>
+        <hr>
+        <h2>Filter toys by age</h2>
+        <form method="POST" action="/api/get-toys">
+            <label for="from">Min age:</label>
+            <input type="number" id="price" name="min-age" step="1" max="18" min="0" value="0">
+            <br>
+            <label for="from">Max age:</label>
+            <input type="number" id="price" name="max-age" step="1" max="18" min="0" value="0">
+            <br>
+            <input type="submit" value="Filter toys"> 
+        </form> 
+    </body>
+</html>

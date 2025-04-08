@@ -1,92 +1,19 @@
 {
     "toys": [
         {
-            "name": "Ball",
-            "price": 10.44,
-            "age_range": [
-                0,
-                16
-            ]
-        },
-        {
-            "name": "Rocket",
-            "price": 99.99,
-            "age_range": [
-                14,
-                16
-            ]
-        },
-        {
             "name": "Gun",
-            "price": 499.99,
-            "age_range": [
-                14,
-                16
-            ]
-        },
-        {
-            "name": "fasddsf",
             "price": 100.0,
-            "age_range": [
-                "10",
-                "90"
-            ]
+            "age": "6"
         },
         {
-            "name": "fadsfs",
-            "price": 70.45,
-            "age_range": [
-                "10",
-                "90"
-            ]
-        },
-        {
-            "name": "fasdfs",
-            "price": 14.53,
-            "age_range": [
-                "10",
-                "65"
-            ]
-        },
-        {
-            "name": "fasdfs",
+            "name": "fads",
             "price": 100.0,
-            "age_range": [
-                "5",
-                "3"
-            ]
+            "age": "0"
         },
         {
-            "name": "\"",
+            "name": "fadsfsd",
             "price": 100.0,
-            "age_range": [
-                "0",
-                "0"
-            ]
-        },
-        {
-            "name": "\"",
-            "price": 100.0,
-            "age_range": [
-                "0",
-                "0"
-            ]
-        },
-        {
-            "name": "\"",
-            "price": 100.0,
-            "age_range": [
-                "0",
-                "0"
-            ]
-        },
-        {
-            "name": "\"",
-            "price": 100.0,
-            "age_range": [
-                "0",
-                "0"
-            ]
+            "age": "7"
         }
     ]
 }

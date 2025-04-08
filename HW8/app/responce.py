@@ -5,8 +5,7 @@ from view function
 
 from typing import List, TypeAlias, Tuple, AnyStr, Iterator
 
-from app.utils import StatusCode
-from app.utils import *
+from app.http import *
 from app.templates import render
 
 import json
@@ -70,7 +69,7 @@ class JSONResponce(Responce):
                  json_data: str, 
                  status: StatusCode = StatusCode.S200,
                  headers: Headers = [contenttype_json],
-                 **json_format):
+                 json_format: dict = {}):
         body = json_data
         if json_format:
             body = json.dumps(json.loads(json_data), **json_format)
