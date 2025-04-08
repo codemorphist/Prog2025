@@ -1,0 +1,111 @@
+.container {
+    width: 512px;
+    height: 256px;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+.form-heading {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+
+    border: 3px solid blue;
+    padding: 18px;
+    box-shadow: 10px 10px 0px -5px blue;
+}
+
+.form-data {
+    height: 32px;
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.form-data input {
+    border: 1px solid black;
+    color: black;
+    background: white;
+}
+
+.form-data select {
+    border: 1px solid black;
+    color: black;
+    background: white;
+}
+
+.input-count {
+    flex: 1;
+    width: 128px;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.select-currency {
+    flex: 1;
+
+    width: 128px;
+    font-size: 16px;
+    font-family: monospace;
+
+    margin-left: 8px;
+}
+
+.submit-button {
+    margin-top: 16px;
+
+    height: 32px;
+
+    color: black;
+    border: 1px solid black;
+    background: white;
+
+    cursor: pointer;
+
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    color: white;
+    background: black;
+}
+
+.placeholder {
+    font-size: 16px;
+    font-family: monospace;
+
+    margin-top: 24px;
+    padding: 18px;
+
+    text-align: center;
+}
+
+.result {
+    color: green;
+    border: 2px solid green;
+    box-shadow: 10px 10px 0px -5px green;
+}
+
+.error {
+    color: red;
+    border: 2px solid red;
+    box-shadow: 10px 10px 0px -5px red;
+}
