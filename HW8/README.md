@@ -1,8 +1,8 @@
 # Simple Web Framework
 
 ```
-.
-├── runserver.py        <-- Script that run server
+├── runserver.py        <<< Script that run server >>>
+│
 ├── db.json             <-- Database in JSON format
 ├── app                 <-- Simple Web Framework module
 │   ├── settings.py     <= Setting for app
@@ -12,14 +12,14 @@
 │   ├── db.py           <= Module for work with DB
 │   ├── templates.py    <= Module for work with templates
 │   ├── responce.py     <= Responce classes
+│   ├── errors.py       <= HTTP errors generators
+│   ├── http.py         <= HTTP constants
 │   └── utils.py        <= Utils 
 └── templates           <-- Templates folder
+    ├── 400.html        
     ├── 404.html        
     ├── 500.html        
-    ├── added.html
-    ├── add.html
-    ├── index.html
-    └── view.html
+    └── ... 
 ```
 
 # Task T28.4
@@ -32,7 +32,7 @@ Toys DB Structure:
         {
             "name": "str",               
             "price": "float"             
-            "age-range": ["int", "int"] 
+            "age": "int"
         },
     ]
 }
