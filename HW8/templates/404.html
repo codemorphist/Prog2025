@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>404 NOT FOUND</h1>
-        <p>Page <b>{{ path }}</b> not found</p>
+        <p>Page <b>{{ path | escape }}</b> not found</p>
         <hr>
     </body>
 </html>

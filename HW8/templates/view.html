@@ -6,7 +6,7 @@
         <title>Toys List</title>
     </head>
     <body>
-        <h1><a href="{{ tag_url("index") }}">Home</a></h1>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
         <hr>
         <h2>Toys list</h2>
         <table>
@@ -24,7 +24,7 @@
                    <td>{{ toy["name"] }}</td>
                    <td>{{ toy["price"] }}₴</td>
                    <td>{{ toy["age"] }}</td>
-                   <td><a href="/delete-toy/{{ loop.index - 1}}">Delete</a></td>
+                   <td><a href="{{ urlpath('delete-toy', toy_id=loop.index-1) }}">Delete</a></td>
                </tr>
                {% endfor %}
             </tbody>

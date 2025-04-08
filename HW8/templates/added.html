@@ -6,7 +6,7 @@
         <title>Added toy {{ toy["name"] }}</title>
     </head>
     <body>
-        <h1><a href="/">Home</a></h1>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
         <hr>
         <h2>Succesfuly added toy {{ toy["name"] }}</h2>
         <ul>
@@ -15,6 +15,6 @@
             <li><b>Age:</b> {{ toy["age"] }}</li>
         </ul>
 
-        <a href="/add-toy">Add more one</a>
+        <a href="{{ urlpath('add-toy') }}">Add more one</a>
     </body>
 </html>

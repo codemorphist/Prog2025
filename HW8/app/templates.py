@@ -17,5 +17,5 @@ def get_template(template: str) -> Template:
 
 def render(template: str, **kwargs):
     temp = get_template(template)
-    kwargs = {"tag_url": url, **kwargs}
-    return temp.render(**kwargs)
+    custom_tags = {"urlpath": url}
+    return temp.render(**custom_tags, **kwargs)

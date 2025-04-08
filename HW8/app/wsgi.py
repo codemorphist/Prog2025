@@ -5,6 +5,7 @@ WSGI application
 
 import urllib.parse
 
+from app import responce
 from app.errors import responce_404, responce_500
 from app.urls import urlpatterns
 
@@ -31,18 +32,19 @@ def application(environ, start_response):
         data = {key: value[0] for key, value in parsed_data.items()}
 
     # Default responce 404 HTTP Error
-    status, headers, body = responce_404(path)
+    responce = responce_404(path)
 
     for pattern in urlpatterns:
         matched, params = pattern.parse(path) 
         if matched:
             try: # If patter found generate responce
-                status, headers, body = pattern.view(path, data, **params)
-            except Exception as e: # If Exception return 500 HTTP error
+                 responce = pattern.view(path, data, **params)
+            except: # If Exception return 500 HTTP error
                 error = traceback.format_exc()
-                status, headers, body = responce_500(error)      
+                responce = responce_500(error)      
             finally:
                 break
 
+    status, headers, body = responce
     start_response(status, headers)
     return [bytes(body, encoding="utf-8")]

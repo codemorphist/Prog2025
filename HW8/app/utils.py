@@ -68,7 +68,7 @@ class Path:
             return False, {}
 
         params_values = {}
-        for param, converter, rex in self.params.items():
+        for param, (converter, _) in self.params.items():
             params_values[param] = converter(params.group(param))
 
         return True, params_values
@@ -90,6 +90,9 @@ class Path:
 
         return self.url_pattern.format(**kwargs)
 
+    def __repr__(self) -> str:
+        return f"<Path ({self.pattern})>"
+
 
 PATH_REGISTRY = {} 
     
@@ -109,8 +112,3 @@ def url(name: str, **kwargs) -> str:
     if name not in PATH_REGISTRY:
         raise NameError(f"Path with name {name} not registred")
     return PATH_REGISTRY[name].url(**kwargs)
-
-
-if __name__ == "__main__":
-    path("index/<int:id>", lambda _: _, name="index") 
-    print(url("index", id=2))

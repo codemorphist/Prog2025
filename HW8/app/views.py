@@ -58,7 +58,6 @@ def filter_toys(path, data):
 def toys_age_filter(min_age: int, max_age: int):
     def _filter(obj: dict):
         obj_age = int(obj["age"])
-        print(obj_age, min_age <= obj_age <= max_age)
         return min_age <= obj_age <= max_age
     return _filter
 

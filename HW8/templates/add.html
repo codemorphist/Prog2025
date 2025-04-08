@@ -6,10 +6,10 @@
         <title>Add toy</title>
     </head
     <body>
-        <h1><a href="/">Home</a></h1>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
         <hr>
         <h2>Add toy form</h2>
-        <form method="POST" action="/add-toy">
+        <form method="POST" action="{{ urlpath('add-toy') }}">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <br>
