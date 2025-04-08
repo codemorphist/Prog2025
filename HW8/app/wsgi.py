@@ -1,3 +1,8 @@
+"""
+This is main file that contain implementaion of
+WSGI application
+"""
+
 import urllib.parse
 
 from app.utils import StatusCode

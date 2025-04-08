@@ -1,3 +1,7 @@
+"""
+This is file for you views functions
+"""
+
 from app.responce import HTMLResponce, HttpResponce
 from app.responce import JSONResponce
 from app.templates import render

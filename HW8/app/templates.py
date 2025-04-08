@@ -1,3 +1,8 @@
+"""
+This module contains useful function to work with templates
+based on Jinja2 package
+"""
+
 from app.settings import TEMPLATE_DIR
 from jinja2 import Environment, FileSystemLoader, Template
 

@@ -1,3 +1,11 @@
+"""
+This file contains url routes for site
+
+All routes must placed in urlpatters array in next format:
+    (route, view function)
+"""
+
+
 import app.views as views
 
 # List with url patterns

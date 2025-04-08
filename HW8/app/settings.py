@@ -1,3 +1,7 @@
+"""
+This file contains setting for app
+"""
+
 import os 
 
 # Base directory path
