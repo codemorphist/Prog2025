@@ -28,7 +28,8 @@ def application(environ, start_response):
 
     # Default responce 404 HTTP Error
     status, headers, body = HTMLResponce("404.html", 
-                                         status=StatusCode.S404)
+                                         status=StatusCode.S404,
+                                         context={"path": path})
 
     for pattern, view in urlpatterns:
         if compare_pattern(path, pattern):

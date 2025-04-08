@@ -8,17 +8,24 @@
     <body>
         <h1><a href="/">Home</a></h1>
         <hr>
-        <h2>Toys</h2>
-        <ul>
-        {% for toy in toys %} 
-            <li>
-                <ul>
-                    <li><b>Name:</b> {{ toy["name"] }}</li>
-                    <li><b>Price:</b> {{ toy["price"] }}₴</li>
-                    <li><b>Age range:</b> {{ toy["age_range"][0] }}-{{ toy["age_range"][1] }}</li>
-                </ul>
-            </li> 
-        {% endfor %}
-        </ul>
+        <h2>Toys list</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Age range</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for toy in toys %} 
+               <tr>
+                   <td>{{ toy["name"] }}</td>
+                   <td>{{ toy["price"] }}₴</td>
+                   <td>{{ toy["age_range"][0] }}-{{ toy["age_range"][1] }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html>
