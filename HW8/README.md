@@ -10,3 +10,18 @@
 └── templates       <--- Templates dir
     └── 404.html    
 
+# Task T28.4
+
+Toys DB Structure:
+
+```json
+{
+    ...
+    {
+        name: str,             // toy name
+        price: str             // toy price
+        age-range: [int, int]  // age range for toy
+    },
+    ...
+}
+```

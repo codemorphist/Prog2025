@@ -1,12 +1,16 @@
 from http_utils import StatusCode
-from responce import Responce 
+from responce import HTMLResponce, HttpResponce
 
 
-def add(path, params) -> Responce:
+def index(path, params):
+    return HTMLResponce("index.html")
+
+
+def add(path, params):
     print(params)
-    return StatusCode.S200, "This is add"
+    return HttpResponce("This is add")
 
 
-def view(path, params) -> Responce:
+def view(path, params):
     print(params)
-    return StatusCode.S200, "This is view"
+    return HttpResponce("This is view")

@@ -1,11 +1,9 @@
 import urllib.parse
 
 from http_utils import StatusCode
-from http_utils import contenttype_html
+from responce import HTMLResponce
 
 from urls import urlpatterns, compare_pattern
-
-from templates import render
 
 
 def application(environ, start_response):
@@ -16,11 +14,11 @@ def application(environ, start_response):
 
     for pattern, view in urlpatterns:
         if compare_pattern(path, pattern):
-            status, body = view(path, params)
+            status, headers, body = view(path, params)
             break
     else:
-        status = StatusCode.S404
-        body = render("404.html", path=path)
+        status, headers, body = HTMLResponce("404.html", 
+                                             status=StatusCode.S404)
 
-    start_response(status.value, [contenttype_html])
+    start_response(status.value, headers)
     return [bytes(body, encoding="utf-8")]
