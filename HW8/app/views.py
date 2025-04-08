@@ -1,8 +1,8 @@
-from app.utils import StatusCode
-from app.utils import contenttype_html
 from app.responce import HTMLResponce, HttpResponce
+from app.responce import JSONResponce
 from app.templates import render
 
+import json
 import app.db as db
 
 
@@ -26,4 +26,23 @@ def add(path, params):
 
 def view(path, params):
     toys = db.get_toys()
+    print(toys)
     return HTMLResponce("view.html", context={"toys": toys})
+
+
+def toys_filter_age(from_age: int, to_age: int):
+    def _filter(obj: dict):
+        obj_from, obj_to = map(int, obj["age_range"])
+        return from_age <= obj_from and obj_to <= to_age
+    return _filter
+
+
+def get_toys(path, params):
+    toys = db.get_toys()
+    print(params)
+    if "range" in params:
+        from_age, to_age = list(map(int, params["range"].split()))
+        iterator = filter(toys_filter_age(from_age, to_age), toys)
+        toys = list(iterator)
+    json_data = json.dumps(toys, indent=4)
+    return JSONResponce(json_data)

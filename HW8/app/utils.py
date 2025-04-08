@@ -8,4 +8,8 @@ class StatusCode(str, Enum):
     S500 = "500 INTERNAL SERVER ERROR"
 
 
-contenttype_html = ("Content-Type", "text/html; charset=utf-8")
+contenttype_text = ("Content-Type", "text/plain; charset=utf-8")
+contenttype_html = ("content-type", "text/html; charset=utf-8")
+contenttype_json = ("Content-Type", "application/json; charset=utf-8")
+contenttype_xml  = ("Content-Type", "text/xml; charset=utf-8")
+

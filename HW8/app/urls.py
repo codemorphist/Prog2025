@@ -4,7 +4,9 @@ import app.views as views
 urlpatterns = [
     ("", views.index),
     ("add/", views.add),
-    ("view/", views.view)
+    ("view/", views.view),
+
+    ("api/get-toys/", views.get_toys)
 ]
 
 

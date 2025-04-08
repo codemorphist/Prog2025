@@ -1,7 +1,7 @@
 import os 
 
 # Base directory path
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+BASE_DIR = "." 
 
 # Templates settings
 TEMPLATE_DIR = "templates/"
