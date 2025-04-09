@@ -94,29 +94,3 @@ def add_student(path, data):
     return HTMLResponce("added.html", context={"subjects": subjects, 
                                                "student": student})
 
-
-def edit_student(path, data, id: int):
-    subjects = db.get_subjects()
-    if data == {}:
-        try:
-            student = db.get_student(id)
-            student["id"] = id
-        except:
-            return responce_404()
-        
-        return HTMLResponce("edit_student.html", 
-                        context={"subjects": subjects, 
-                                 "student": student})
-    
-    res = parse_student(data)
-    if isinstance(res, Responce):
-        return res
-
-    student = res
-    db.update_student(id, student)
-    student["id"] = id
-
-    return HTMLResponce("student.html", 
-                        context={"subjects": subjects,
-                                 "student": student})
-

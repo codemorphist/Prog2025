@@ -8,6 +8,7 @@ import urllib.parse
 from app import responce
 from app.errors import responce_404, responce_500
 from app.urls import urlpatterns
+from app.static import is_static, static
 
 import traceback
 
@@ -16,6 +17,12 @@ import traceback
 def application(environ, start_response):
     # Get request path
     path = environ.get("PATH_INFO", "")
+
+    # If try to get static return static
+    if is_static(path):
+        status, headers, body = static(path)
+        start_response(status, headers)
+        return [bytes(body, encoding="utf-8")]
     
     length = environ.get('CONTENT_LENGTH', '0')
     try:

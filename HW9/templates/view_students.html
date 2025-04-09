@@ -4,41 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Students list ({{ students | length }})</title>
+        <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
-
-        <style>
-        table {
-            border-collapse: collapse;
-            border: 1px solid black;
-        }
-
-        tr, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 8px;
-        }
-
-        .scholarship__increased {
-            background: #42db42;
-        }
-
-        .scholarship__common {
-            background: #5888ff;
-        }
-
-        .scholarship__none {
-            background: white;
-        }
-
-
-        .scholarship__unrated {
-            background: #ff6a6a;
-        }
-        </style>
-
         <h1><a href="{{ urlpath('index') }}">Home</a></h1>
         <hr>
 

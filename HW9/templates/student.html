@@ -4,23 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Student {{ student.name }}</title>
+        <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
-        <style>
-        table {
-            border-collapse: collapse;
-            border: 1px solid black;
-        }
-
-        tr, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 8px;
-        }
-        </style>
-
         <h1><a href="{{ urlpath('index') }}">Home</a></h1>
         <hr>
 
@@ -53,7 +39,7 @@
                 {% endfor %}
             </tbody>
             <tfoot>
-                <tr>
+                <tr class="average_grade">
                     <td>Average grade</td>
                     <td>{{ '%.2f' | format(student.average_grade) }}</td>
                 </tr> 
