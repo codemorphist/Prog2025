@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Toys List</title>
+    </head>
+    <body>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+        <h2>Toys list</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Age range</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for toy in toys %} 
+               <tr>
+                   <td>{{ toy["name"] }}</td>
+                   <td>{{ toy["price"] }}₴</td>
+                   <td>{{ toy["age"] }}</td>
+                   <td><a href="{{ urlpath('delete-toy', toy_id=loop.index-1) }}">Delete</a></td>
+               </tr>
+               {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

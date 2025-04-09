@@ -1,0 +1,19 @@
+{
+    "toys": [
+        {
+            "name": "Ball",
+            "price": 100.0,
+            "age": "0"
+        },
+        {
+            "name": "Gun",
+            "price": 100.0,
+            "age": "14"
+        },
+        {
+            "name": "Tenis rocket",
+            "price": 100.0,
+            "age": "6"
+        }
+    ]
+}

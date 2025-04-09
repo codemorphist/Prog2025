@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Add toy</title>
+    </head
+    <body>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+        <h2>Add toy form</h2>
+        <form method="POST" action="{{ urlpath('add-toy') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" value="100.00">
+            <br>
+
+            <label for="from">Age:</label>
+            <input type="number" id="price" name="age" step="1" max="18" min="0" value="0">
+            <br>
+
+            <input type="submit" value="Add toy"> 
+        </form> 
+    </body>
+</html>
