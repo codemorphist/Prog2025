@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student deleted</title>
+    </head>
+    <body>
+        <h2><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+
+        <h2>Student {{ student.name }} was deleted</h2>
+
+        <br>
+        <a href="{{ urlpath('view-students') }}">Student list</a>
+    </body>
+</html>

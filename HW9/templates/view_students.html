@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Students list ({{ students | length }})</title>
+    </head>
+    <body>
+
+        <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        tr, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+
+        .scholarship__increased {
+            background: #42db42;
+        }
+
+        .scholarship__common {
+            background: #5888ff;
+        }
+
+        .scholarship__none {
+            background: white;
+        }
+
+
+        .scholarship__unrated {
+            background: #ff6a6a;
+        }
+        </style>
+
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+
+        <h2>Students rating</h2>
+        <p><b>Total:</b> {{ students | length }}</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Average grade</th>
+                    <th>Sholarship</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr class="scholarship__{{ student.scholarship | lower}}">
+                    <td>{{ loop.index }}</td>
+                    <td><a href="{{ urlpath('view-student', id=loop.index-1) }}">{{ student.name }}</a></td>
+                    <td>{{ student.average_grade }}</td>
+                    <td>{{ student.scholarship }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    </body>
+</html>

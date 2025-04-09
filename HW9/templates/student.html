@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student {{ student.name }}</title>
+    </head>
+    <body>
+        <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        tr, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+        </style>
+
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+
+        <h2>Student {{ student.name }}</h2> 
+        <ul>
+            <li><b>Name:</b> {{ student.name }}</li>
+            <li><b>Born year:</b> {{ student.born_year }}</li>
+            <li><b>Application year:</b> {{ student.application_year }}</li>
+            <li><b>Graduation year:</b> {{ student.graduation_year }}</li>
+        </ul>
+
+        <br>
+        <a href="{{ urlpath('delete-student', id=student.id)}}">Delete</a>
+        <br>
+
+        <h3>Grades</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr> 
+            </thead>
+            <tbody>
+                {% for subj, grade in zip(subjects, student.grades) %}   
+                <tr>
+                    <td>{{ subj }}</td>
+                    <td>{{ grade }}</td>
+                </tr> 
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Average grade</td>
+                    <td>{{ '%.2f' | format(student.average_grade) }}</td>
+                </tr> 
+            </tfoot>
+        </table>
+
+        
+        <br>
+        <a href="{{ urlpath('view-students') }}">Students rating</a>
+    </body>
+</html> 

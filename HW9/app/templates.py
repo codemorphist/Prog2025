@@ -10,6 +10,9 @@ from jinja2 import Environment, FileSystemLoader, Template
 
 jinja_env = Environment(loader = FileSystemLoader(TEMPLATE_DIR))
 
+jinja_env.globals.update(zip=zip)
+jinja_env.globals.update(urlpath=url)
+
 
 def get_template(template: str) -> Template:
     return jinja_env.get_template(template)
@@ -17,5 +20,4 @@ def get_template(template: str) -> Template:
 
 def render(template: str, **kwargs):
     temp = get_template(template)
-    custom_tags = {"urlpath": url}
-    return temp.render(**custom_tags, **kwargs)
+    return temp.render(**kwargs)
