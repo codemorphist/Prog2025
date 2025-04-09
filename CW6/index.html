@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>COUNT WORDS BY URL</title>
+        <link href="/static/reset.css" rel="stylesheet">
+        <link href="/static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="container-heading">Calculate word count</h1>
+            <form class="form" method="POST" action="/count-words">
+                <input class="input-url" type="url" name="url" placeholder="Input url:" required>
+                <div class="submit-buttons">
+                    <input class="submit-button" type="submit" name="get-json" value="Get JSON">
+                    <input class="submit-button" type="submit" name="get-xml" value="Get XML">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
