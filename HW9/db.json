@@ -9,22 +9,6 @@
     ],
     "students": [
         {
-            "name": "Mary Martin",
-            "born_year": "2006-04-05",
-            "application_year": "2025-04-09",
-            "graduation_year": "2029-01-03",
-            "scholarship": "Increased",
-            "grades": [
-                85,
-                99,
-                58,
-                99,
-                70,
-                56
-            ],
-            "average_grade": 77.83
-        },
-        {
             "name": "Robert Adams",
             "born_year": "2006-06-25",
             "application_year": "2025-04-09",
@@ -45,7 +29,7 @@
             "born_year": "2006-03-03",
             "application_year": "2025-04-09",
             "graduation_year": "2029-01-03",
-            "scholarship": "Increased",
+            "scholarship": "Common",
             "grades": [
                 74,
                 52,

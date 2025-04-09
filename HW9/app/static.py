@@ -1,8 +1,9 @@
 import os
 
 from app.settings import STATIC_DIR, STATIC_PATH
-from app.responce import Responce, HttpResponce
+from app.responce import Responce
 from app.errors import responce_404
+from app.templates import jinja_env
 
 
 def is_static(path: str) -> bool:
@@ -35,3 +36,13 @@ def static(path: str) -> Responce:
             mediatype = "text/plain"
 
     return Responce(data, headers=[("Content-Type", f"{mediatype}")])
+
+
+def staticpath(filepath: str):
+    path = os.path.join(STATIC_PATH, filepath)
+    if not os.path.exists(path):
+        raise FileExistsError(f"Static file '{filepath}' not exists")
+
+    return f"/static/{filepath}"
+
+jinja_env.globals.update(staticpath=staticpath)
