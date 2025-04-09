@@ -42,6 +42,10 @@ class Path:
         else:
             self.regex_pattern += "/?"
 
+        # Fixed bug when for path("test/", ...)
+        # test/ and testtest/ both return True
+        self.regex_pattern = f"^{self.regex_pattern}"
+
     def construct_pattern(self):
         self.url_pattern = "/" + re.sub(Path.PARAM_PATTERN, 
                                   r"{\g<param>}", 
@@ -50,11 +54,7 @@ class Path:
     @staticmethod
     def normilize(path: str) -> str:
         path = path.lstrip("/").rstrip("/")
-        # special_chars = r"\^$.|?*+()[]{}"
-        # for char in special_chars:
-        #     path = path.replace(char, f"\\{char}")
         return path
-
 
     def parse(self, path: str) -> tuple[bool, dict]:
         path = Path.normilize(path)
@@ -86,7 +86,7 @@ class Path:
             converter, rex = self.params[param]
             match = re.match(rex, value)
             if not match:
-                raise ValueError(f"Invalid converter {converter} ({rex}) value {value}") 
+                raise ValueError(f"Invalid converter {converter} ({rex}) for value '{value}'") 
 
         return self.url_pattern.format(**kwargs)
 

@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 from app.settings import DB_PATH
 from app.models import SUBJECTS
 
+from copy import deepcopy
+
 
 DB = None
 
@@ -62,11 +64,12 @@ def student(name: str, byear: datetime, ayear: datetime,
             grades: list[int]) -> dict:
     study3y9m = timedelta(days=365*3 + 9*30)
 
+    date_format = "%Y-%m-%d"
     return {
         "name": name,
-        "born_year": byear.strftime("%m-%d-%Y"), 
-        "application_year": ayear.strftime("%m-%d-%Y"),
-        "graduation_year": (ayear + study3y9m).strftime("%m-%d-%Y"),
+        "born_year": byear.strftime(date_format), 
+        "application_year": ayear.strftime(date_format),
+        "graduation_year": (ayear + study3y9m).strftime(date_format),
         "scholarship": None,
         "grades": grades,
         "average_grade": round(sum(grades)/len(grades), 2)
@@ -99,7 +102,7 @@ def calc_sholarship() -> list:
             s["scholarship"] = "None"
 
     DB["students"] = students
-    return students
+    return deepcopy(students)
 
 
 def get_students() -> list[dict]:
@@ -109,21 +112,28 @@ def get_students() -> list[dict]:
 
 def get_student(id: int):
     db_is_loaded()
-    return DB["students"][id]
+    return deepcopy(DB["students"][id])
 
 
-def append_student(student: dict):
+def update_student(id: int, student: dict):
     db_is_loaded()
-    DB["students"].append(student)
+    DB["students"][id] = deepcopy(student)
     calc_sholarship()
     save()
+
+
+def append_student(student: dict) -> int:
+    db_is_loaded()
+    DB["students"].append(deepcopy(student))
+    save()
+    return len(DB["students"])-1
 
 
 def pop_student(id: int) -> dict:
     db_is_loaded()
     student = DB["students"].pop(id)
     save()
-    return student 
+    return deepcopy(student)
 
 
 def random_student() -> dict:
@@ -144,8 +154,8 @@ def random_student() -> dict:
     return student(name, byear, ayear, grades)
 
 
-def random_db():
-    for _ in range(102):
+def random_db(size: int):
+    for _ in range(size):
         s = random_student()
         append_student(s)
 
