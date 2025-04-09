@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student {{ student.name }}</title>
+        <link rel="stylesheet" href="{{ staticpath('style.css') }}">
+    </head>
+    <body>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+
+        <h2>Student {{ student.name }} was added</h2> 
+        <ul>
+            <li><b>Name:</b> <a href="{{ urlpath('view-student', id=student.id) }}">{{ student.name }}</a></li>
+            <li><b>Born year:</b> {{ student.born_year }}</li>
+            <li><b>Application year:</b> {{ student.application_year }}</li>
+            <li><b>Graduation year:</b> {{ student.graduation_year }}</li>
+        </ul>
+
+        <br>
+        <a href="{{ urlpath('add-student') }}">Add more one</a>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Add student</title>
+        <link rel="stylesheet" href="{{ staticpath('style.css') }}">
+    </head>
+    <body>
+        <h1><a href="{{ urlpath('index') }}">Home</a></h1>
+        <hr>
+
+        <h2>Add new student</h2>
+        <form method="POST" action="{{ urlpath('add-student') }}">
+            <h3>Student info</h3>
+            <label for="name-inut">Name:</label>
+            <input id="name-input" type="text" name="name" value=""> 
+            <br>
+
+            <label for="byear-input">Born year:</label>
+            <input id="byear-input" type="date" name="byear" value="">
+            <br>
+
+            <label for="ayear-input">Application year:</label>
+            <input type="date" name="ayear" value="">
+            <br>
+
+            <h3>Student grades</h3>
+            {% for subj in subjects %}
+            <label for="subject-{{ loop.index-1 }}-input">{{ subj }}</label>
+            <input id="subject-{{ loop.index-1 }}-input"type="number" 
+            name="subject-{{ loop.index-1 }}" min="0" max="100" step="1" value="0">
+            <br>
+            {% endfor %}
+
+            <input type="submit" value="Add student">
+        </form> 
+    </body>
+</html>

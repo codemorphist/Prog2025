@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+tr, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+}
+
+.average_grade {
+    background: aquamarine;
+}
+
+.scholarship__increased {
+    background: #42db42;
+}
+
+.scholarship__common {
+    background: #58c7ff;
+}
+
+ .scholarship__none {
+    background: white;
+ }
+
+ .scholarship__unrated {
+    background: #ff6a6a;
+ }

@@ -1,0 +1,2364 @@
+{
+    "subjects": [
+        "Calculus",
+        "Math logic",
+        "Differential equations",
+        "Differential geometry",
+        "Programming",
+        "English"
+    ],
+    "students": [
+        {
+            "name": "Robert Adams",
+            "born_year": "2006-06-25",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Increased",
+            "grades": [
+                82,
+                99,
+                78,
+                40,
+                69,
+                98
+            ],
+            "average_grade": 77.67
+        },
+        {
+            "name": "Maria Anderson",
+            "born_year": "2006-03-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                74,
+                52,
+                94,
+                80,
+                68,
+                90
+            ],
+            "average_grade": 76.33
+        },
+        {
+            "name": "James Brown",
+            "born_year": "2006-05-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                49,
+                99,
+                92,
+                84,
+                72,
+                44
+            ],
+            "average_grade": 73.33
+        },
+        {
+            "name": "Linda Martinez",
+            "born_year": "2006-06-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                60,
+                59,
+                95,
+                91,
+                75,
+                54
+            ],
+            "average_grade": 72.33
+        },
+        {
+            "name": "Joseph Martinez",
+            "born_year": "2006-07-01",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                76,
+                68,
+                44,
+                92,
+                79,
+                72
+            ],
+            "average_grade": 71.83
+        },
+        {
+            "name": "David Anderson",
+            "born_year": "2006-02-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                82,
+                64,
+                81,
+                73,
+                32,
+                99
+            ],
+            "average_grade": 71.83
+        },
+        {
+            "name": "Laura Mitchell",
+            "born_year": "2006-07-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                51,
+                100,
+                82,
+                55,
+                84,
+                50
+            ],
+            "average_grade": 70.33
+        },
+        {
+            "name": "Mary Martinez",
+            "born_year": "2006-07-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                68,
+                17,
+                87,
+                100,
+                70,
+                64
+            ],
+            "average_grade": 67.67
+        },
+        {
+            "name": "William Martin",
+            "born_year": "2006-02-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Common",
+            "grades": [
+                84,
+                65,
+                38,
+                55,
+                79,
+                84
+            ],
+            "average_grade": 67.5
+        },
+        {
+            "name": "Deborah Williams",
+            "born_year": "2006-07-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                82,
+                96,
+                91,
+                35,
+                68,
+                30
+            ],
+            "average_grade": 67.0
+        },
+        {
+            "name": "Julia Brown",
+            "born_year": "2006-04-24",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                65,
+                70,
+                48,
+                98,
+                24,
+                97
+            ],
+            "average_grade": 67.0
+        },
+        {
+            "name": "William Anderson",
+            "born_year": "2006-04-20",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                70,
+                37,
+                59,
+                86,
+                96,
+                50
+            ],
+            "average_grade": 66.33
+        },
+        {
+            "name": "Julia Anderson",
+            "born_year": "2006-04-05",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                90,
+                89,
+                21,
+                37,
+                81,
+                69
+            ],
+            "average_grade": 64.5
+        },
+        {
+            "name": "Richard Martinez",
+            "born_year": "2006-07-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                84,
+                68,
+                42,
+                26,
+                97,
+                68
+            ],
+            "average_grade": 64.17
+        },
+        {
+            "name": "Linda Mitchell",
+            "born_year": "2006-03-05",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                80,
+                87,
+                63,
+                8,
+                90,
+                55
+            ],
+            "average_grade": 63.83
+        },
+        {
+            "name": "Thomas Brown",
+            "born_year": "2006-06-26",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                89,
+                22,
+                98,
+                72,
+                45,
+                57
+            ],
+            "average_grade": 63.83
+        },
+        {
+            "name": "Lisa Davis",
+            "born_year": "2006-06-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                100,
+                95,
+                32,
+                12,
+                90,
+                48
+            ],
+            "average_grade": 62.83
+        },
+        {
+            "name": "Maria Brown",
+            "born_year": "2006-04-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                35,
+                52,
+                96,
+                77,
+                89,
+                24
+            ],
+            "average_grade": 62.17
+        },
+        {
+            "name": "Joseph Davis",
+            "born_year": "2006-04-26",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                80,
+                67,
+                59,
+                93,
+                59,
+                14
+            ],
+            "average_grade": 62.0
+        },
+        {
+            "name": "Thomas Davis",
+            "born_year": "2006-07-10",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                4,
+                3,
+                68,
+                97,
+                97,
+                99
+            ],
+            "average_grade": 61.33
+        },
+        {
+            "name": "Mary Johnson",
+            "born_year": "2006-03-04",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                61,
+                13,
+                90,
+                22,
+                89,
+                88
+            ],
+            "average_grade": 60.5
+        },
+        {
+            "name": "Thomas Nelson",
+            "born_year": "2006-04-08",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                83,
+                70,
+                3,
+                33,
+                74,
+                99
+            ],
+            "average_grade": 60.33
+        },
+        {
+            "name": "Mary Anderson",
+            "born_year": "2006-02-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "None",
+            "grades": [
+                96,
+                27,
+                85,
+                11,
+                41,
+                100
+            ],
+            "average_grade": 60.0
+        },
+        {
+            "name": "Julia Williams",
+            "born_year": "2006-01-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                44,
+                72,
+                77,
+                4,
+                92,
+                69
+            ],
+            "average_grade": 59.67
+        },
+        {
+            "name": "Thomas Lopez",
+            "born_year": "2006-03-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                69,
+                56,
+                98,
+                43,
+                82,
+                9
+            ],
+            "average_grade": 59.5
+        },
+        {
+            "name": "Deborah Mitchell",
+            "born_year": "2006-03-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                38,
+                76,
+                12,
+                100,
+                96,
+                33
+            ],
+            "average_grade": 59.17
+        },
+        {
+            "name": "Julia Mitchell",
+            "born_year": "2006-05-04",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                22,
+                91,
+                56,
+                53,
+                35,
+                98
+            ],
+            "average_grade": 59.17
+        },
+        {
+            "name": "Deborah Johnson",
+            "born_year": "2006-06-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                50,
+                74,
+                74,
+                82,
+                7,
+                68
+            ],
+            "average_grade": 59.17
+        },
+        {
+            "name": "Thomas Williams",
+            "born_year": "2006-05-16",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                97,
+                59,
+                96,
+                19,
+                47,
+                34
+            ],
+            "average_grade": 58.67
+        },
+        {
+            "name": "Maria Nelson",
+            "born_year": "2006-03-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                60,
+                61,
+                78,
+                45,
+                81,
+                25
+            ],
+            "average_grade": 58.33
+        },
+        {
+            "name": "James Davis",
+            "born_year": "2006-01-29",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                16,
+                79,
+                66,
+                76,
+                24,
+                89
+            ],
+            "average_grade": 58.33
+        },
+        {
+            "name": "Maria Martin",
+            "born_year": "2006-07-07",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                22,
+                78,
+                53,
+                60,
+                99,
+                37
+            ],
+            "average_grade": 58.17
+        },
+        {
+            "name": "Jonh Anderson",
+            "born_year": "2006-03-25",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                27,
+                77,
+                8,
+                87,
+                92,
+                58
+            ],
+            "average_grade": 58.17
+        },
+        {
+            "name": "Richard Nelson",
+            "born_year": "2006-06-30",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                12,
+                82,
+                53,
+                89,
+                42,
+                71
+            ],
+            "average_grade": 58.17
+        },
+        {
+            "name": "Linda Jones",
+            "born_year": "2006-04-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                53,
+                15,
+                62,
+                42,
+                88,
+                87
+            ],
+            "average_grade": 57.83
+        },
+        {
+            "name": "Michal Davis",
+            "born_year": "2006-01-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                44,
+                2,
+                68,
+                81,
+                86,
+                65
+            ],
+            "average_grade": 57.67
+        },
+        {
+            "name": "Jonh Nelson",
+            "born_year": "2006-07-21",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                60,
+                42,
+                81,
+                42,
+                48,
+                71
+            ],
+            "average_grade": 57.33
+        },
+        {
+            "name": "Julia Lopez",
+            "born_year": "2006-07-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                62,
+                39,
+                59,
+                70,
+                59,
+                54
+            ],
+            "average_grade": 57.17
+        },
+        {
+            "name": "Maria Martin",
+            "born_year": "2006-06-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                57,
+                59,
+                29,
+                66,
+                78,
+                54
+            ],
+            "average_grade": 57.17
+        },
+        {
+            "name": "Mary Nelson",
+            "born_year": "2006-01-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                50,
+                33,
+                97,
+                65,
+                33,
+                65
+            ],
+            "average_grade": 57.17
+        },
+        {
+            "name": "Robert Brown",
+            "born_year": "2006-01-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                45,
+                27,
+                91,
+                32,
+                98,
+                46
+            ],
+            "average_grade": 56.5
+        },
+        {
+            "name": "Nancy Williams",
+            "born_year": "2006-06-01",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                41,
+                78,
+                0,
+                96,
+                60,
+                64
+            ],
+            "average_grade": 56.5
+        },
+        {
+            "name": "James Davis",
+            "born_year": "2006-05-24",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                74,
+                56,
+                68,
+                41,
+                46,
+                54
+            ],
+            "average_grade": 56.5
+        },
+        {
+            "name": "Jonh Miller",
+            "born_year": "2006-06-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                61,
+                34,
+                68,
+                72,
+                21,
+                79
+            ],
+            "average_grade": 55.83
+        },
+        {
+            "name": "Thomas Moore",
+            "born_year": "2006-02-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                79,
+                82,
+                66,
+                42,
+                56,
+                9
+            ],
+            "average_grade": 55.67
+        },
+        {
+            "name": "Linda Martinez",
+            "born_year": "2006-07-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                86,
+                90,
+                59,
+                55,
+                39,
+                4
+            ],
+            "average_grade": 55.5
+        },
+        {
+            "name": "Laura Brown",
+            "born_year": "2006-04-07",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                30,
+                11,
+                82,
+                80,
+                87,
+                43
+            ],
+            "average_grade": 55.5
+        },
+        {
+            "name": "Maria Martin",
+            "born_year": "2006-01-21",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                88,
+                75,
+                71,
+                18,
+                57,
+                24
+            ],
+            "average_grade": 55.5
+        },
+        {
+            "name": "Laura Jackson",
+            "born_year": "2006-06-10",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                89,
+                100,
+                0,
+                44,
+                15,
+                84
+            ],
+            "average_grade": 55.33
+        },
+        {
+            "name": "Thomas Nelson",
+            "born_year": "2006-03-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                24,
+                68,
+                39,
+                16,
+                90,
+                95
+            ],
+            "average_grade": 55.33
+        },
+        {
+            "name": "Nancy Moore",
+            "born_year": "2006-05-28",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                26,
+                88,
+                47,
+                58,
+                99,
+                13
+            ],
+            "average_grade": 55.17
+        },
+        {
+            "name": "Jonh Adams",
+            "born_year": "2006-02-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                46,
+                86,
+                90,
+                34,
+                45,
+                27
+            ],
+            "average_grade": 54.67
+        },
+        {
+            "name": "Maria Jones",
+            "born_year": "2006-01-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                92,
+                91,
+                59,
+                49,
+                29,
+                8
+            ],
+            "average_grade": 54.67
+        },
+        {
+            "name": "Joseph Jackson",
+            "born_year": "2006-04-17",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                74,
+                92,
+                0,
+                90,
+                65,
+                6
+            ],
+            "average_grade": 54.5
+        },
+        {
+            "name": "Thomas Williams",
+            "born_year": "2006-05-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                75,
+                85,
+                63,
+                58,
+                17,
+                28
+            ],
+            "average_grade": 54.33
+        },
+        {
+            "name": "Deborah Martinez",
+            "born_year": "2006-06-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                81,
+                65,
+                14,
+                64,
+                20,
+                82
+            ],
+            "average_grade": 54.33
+        },
+        {
+            "name": "William Davis",
+            "born_year": "2006-07-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                35,
+                70,
+                43,
+                80,
+                78,
+                18
+            ],
+            "average_grade": 54.0
+        },
+        {
+            "name": "Linda Jones",
+            "born_year": "2006-06-23",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                55,
+                57,
+                98,
+                2,
+                20,
+                92
+            ],
+            "average_grade": 54.0
+        },
+        {
+            "name": "Jonh Mitchell",
+            "born_year": "2006-03-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                19,
+                97,
+                78,
+                48,
+                53,
+                28
+            ],
+            "average_grade": 53.83
+        },
+        {
+            "name": "William Miller",
+            "born_year": "2006-03-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                58,
+                91,
+                60,
+                33,
+                44,
+                37
+            ],
+            "average_grade": 53.83
+        },
+        {
+            "name": "Julia Adams",
+            "born_year": "2006-02-23",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                66,
+                90,
+                37,
+                57,
+                30,
+                41
+            ],
+            "average_grade": 53.5
+        },
+        {
+            "name": "Sandra Smith",
+            "born_year": "2006-01-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                42,
+                73,
+                74,
+                12,
+                93,
+                26
+            ],
+            "average_grade": 53.33
+        },
+        {
+            "name": "Mary Lopez",
+            "born_year": "2006-06-16",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                33,
+                2,
+                91,
+                67,
+                65,
+                61
+            ],
+            "average_grade": 53.17
+        },
+        {
+            "name": "Linda Jones",
+            "born_year": "2006-02-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                34,
+                4,
+                26,
+                99,
+                68,
+                88
+            ],
+            "average_grade": 53.17
+        },
+        {
+            "name": "Sandra Adams",
+            "born_year": "2006-01-26",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                60,
+                59,
+                67,
+                58,
+                47,
+                27
+            ],
+            "average_grade": 53.0
+        },
+        {
+            "name": "Robert Jackson",
+            "born_year": "2006-06-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                71,
+                41,
+                72,
+                23,
+                44,
+                66
+            ],
+            "average_grade": 52.83
+        },
+        {
+            "name": "Joseph Jackson",
+            "born_year": "2006-06-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                75,
+                60,
+                64,
+                20,
+                48,
+                42
+            ],
+            "average_grade": 51.5
+        },
+        {
+            "name": "Sandra Jackson",
+            "born_year": "2006-03-07",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                48,
+                90,
+                42,
+                70,
+                6,
+                53
+            ],
+            "average_grade": 51.5
+        },
+        {
+            "name": "Sandra Jones",
+            "born_year": "2006-03-23",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                58,
+                71,
+                50,
+                19,
+                62,
+                48
+            ],
+            "average_grade": 51.33
+        },
+        {
+            "name": "David Mitchell",
+            "born_year": "2006-04-17",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                29,
+                53,
+                94,
+                97,
+                19,
+                14
+            ],
+            "average_grade": 51.0
+        },
+        {
+            "name": "Linda Williams",
+            "born_year": "2006-04-04",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                90,
+                87,
+                58,
+                53,
+                3,
+                15
+            ],
+            "average_grade": 51.0
+        },
+        {
+            "name": "Linda Smith",
+            "born_year": "2006-03-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                67,
+                24,
+                56,
+                23,
+                41,
+                93
+            ],
+            "average_grade": 50.67
+        },
+        {
+            "name": "Joseph Smith",
+            "born_year": "2006-03-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                98,
+                19,
+                2,
+                38,
+                63,
+                84
+            ],
+            "average_grade": 50.67
+        },
+        {
+            "name": "Michal Davis",
+            "born_year": "2006-05-20",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                54,
+                31,
+                38,
+                84,
+                44,
+                52
+            ],
+            "average_grade": 50.5
+        },
+        {
+            "name": "Thomas Williams",
+            "born_year": "2006-07-23",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                24,
+                77,
+                79,
+                82,
+                28
+            ],
+            "average_grade": 50.5
+        },
+        {
+            "name": "Joseph Miller",
+            "born_year": "2006-01-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                45,
+                36,
+                14,
+                87,
+                23,
+                97
+            ],
+            "average_grade": 50.33
+        },
+        {
+            "name": "Richard Williams",
+            "born_year": "2006-05-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                25,
+                12,
+                24,
+                99,
+                99,
+                41
+            ],
+            "average_grade": 50.0
+        },
+        {
+            "name": "Michal Martin",
+            "born_year": "2006-07-23",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                82,
+                82,
+                42,
+                44,
+                21,
+                27
+            ],
+            "average_grade": 49.67
+        },
+        {
+            "name": "Thomas Adams",
+            "born_year": "2006-02-01",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                60,
+                33,
+                79,
+                35,
+                82,
+                9
+            ],
+            "average_grade": 49.67
+        },
+        {
+            "name": "Laura Jones",
+            "born_year": "2006-01-30",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                40,
+                33,
+                68,
+                48,
+                12,
+                96
+            ],
+            "average_grade": 49.5
+        },
+        {
+            "name": "Jonh Moore",
+            "born_year": "2006-03-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                1,
+                78,
+                65,
+                83,
+                56
+            ],
+            "average_grade": 49.33
+        },
+        {
+            "name": "James Mitchell",
+            "born_year": "2006-06-14",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                86,
+                19,
+                33,
+                49,
+                13,
+                95
+            ],
+            "average_grade": 49.17
+        },
+        {
+            "name": "Laura Jones",
+            "born_year": "2006-01-08",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                72,
+                55,
+                14,
+                65,
+                81,
+                7
+            ],
+            "average_grade": 49.0
+        },
+        {
+            "name": "Robert Brown",
+            "born_year": "2006-05-20",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                47,
+                70,
+                17,
+                32,
+                86,
+                40
+            ],
+            "average_grade": 48.67
+        },
+        {
+            "name": "Lisa Smith",
+            "born_year": "2006-04-10",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                2,
+                22,
+                50,
+                63,
+                60,
+                94
+            ],
+            "average_grade": 48.5
+        },
+        {
+            "name": "Robert Jackson",
+            "born_year": "2006-05-17",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                49,
+                9,
+                29,
+                98,
+                14,
+                92
+            ],
+            "average_grade": 48.5
+        },
+        {
+            "name": "Lisa Adams",
+            "born_year": "2006-03-15",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                51,
+                35,
+                48,
+                54,
+                7,
+                94
+            ],
+            "average_grade": 48.17
+        },
+        {
+            "name": "Thomas Anderson",
+            "born_year": "2006-06-02",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                37,
+                81,
+                36,
+                64,
+                31,
+                39
+            ],
+            "average_grade": 48.0
+        },
+        {
+            "name": "Julia Mitchell",
+            "born_year": "2006-02-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                3,
+                36,
+                90,
+                99,
+                26,
+                34
+            ],
+            "average_grade": 48.0
+        },
+        {
+            "name": "Nancy Moore",
+            "born_year": "2006-05-25",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                22,
+                84,
+                29,
+                28,
+                88,
+                36
+            ],
+            "average_grade": 47.83
+        },
+        {
+            "name": "Linda Miller",
+            "born_year": "2006-03-26",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                89,
+                57,
+                2,
+                78,
+                17,
+                43
+            ],
+            "average_grade": 47.67
+        },
+        {
+            "name": "Lisa Williams",
+            "born_year": "2006-06-30",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                88,
+                29,
+                57,
+                38,
+                18,
+                54
+            ],
+            "average_grade": 47.33
+        },
+        {
+            "name": "Richard Miller",
+            "born_year": "2006-05-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                16,
+                39,
+                53,
+                70,
+                35,
+                69
+            ],
+            "average_grade": 47.0
+        },
+        {
+            "name": "Jonh Mitchell",
+            "born_year": "2006-04-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                71,
+                51,
+                44,
+                34,
+                46,
+                34
+            ],
+            "average_grade": 46.67
+        },
+        {
+            "name": "Deborah Jackson",
+            "born_year": "2006-06-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                6,
+                82,
+                100,
+                53,
+                36,
+                0
+            ],
+            "average_grade": 46.17
+        },
+        {
+            "name": "Richard Moore",
+            "born_year": "2006-03-24",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                22,
+                62,
+                74,
+                46,
+                49,
+                24
+            ],
+            "average_grade": 46.17
+        },
+        {
+            "name": "Mary Martin",
+            "born_year": "2006-07-21",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                31,
+                2,
+                79,
+                39,
+                54,
+                71
+            ],
+            "average_grade": 46.0
+        },
+        {
+            "name": "Jonh Nelson",
+            "born_year": "2006-02-17",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                75,
+                26,
+                98,
+                58,
+                3,
+                15
+            ],
+            "average_grade": 45.83
+        },
+        {
+            "name": "Linda Williams",
+            "born_year": "2006-01-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                46,
+                54,
+                10,
+                11,
+                96,
+                57
+            ],
+            "average_grade": 45.67
+        },
+        {
+            "name": "Linda Moore",
+            "born_year": "2006-03-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                3,
+                79,
+                22,
+                31,
+                100,
+                39
+            ],
+            "average_grade": 45.67
+        },
+        {
+            "name": "Nancy Lopez",
+            "born_year": "2006-05-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                7,
+                26,
+                37,
+                100,
+                98,
+                3
+            ],
+            "average_grade": 45.17
+        },
+        {
+            "name": "Joseph Smith",
+            "born_year": "2006-01-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                28,
+                39,
+                62,
+                88,
+                18,
+                35
+            ],
+            "average_grade": 45.0
+        },
+        {
+            "name": "Deborah Miller",
+            "born_year": "2006-04-10",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                3,
+                36,
+                85,
+                64,
+                6,
+                71
+            ],
+            "average_grade": 44.17
+        },
+        {
+            "name": "Deborah Williams",
+            "born_year": "2006-03-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                34,
+                10,
+                10,
+                62,
+                60,
+                86
+            ],
+            "average_grade": 43.67
+        },
+        {
+            "name": "Deborah Jones",
+            "born_year": "2006-01-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                26,
+                98,
+                15,
+                13,
+                64,
+                44
+            ],
+            "average_grade": 43.33
+        },
+        {
+            "name": "Richard Johnson",
+            "born_year": "2006-02-10",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                50,
+                73,
+                3,
+                52,
+                58
+            ],
+            "average_grade": 41.5
+        },
+        {
+            "name": "Thomas Anderson",
+            "born_year": "2006-06-21",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                25,
+                50,
+                47,
+                1,
+                46,
+                80
+            ],
+            "average_grade": 41.5
+        },
+        {
+            "name": "Sandra Nelson",
+            "born_year": "2006-06-11",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                59,
+                33,
+                36,
+                13,
+                34,
+                68
+            ],
+            "average_grade": 40.5
+        },
+        {
+            "name": "Richard Martin",
+            "born_year": "2006-06-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                17,
+                90,
+                10,
+                87,
+                14,
+                24
+            ],
+            "average_grade": 40.33
+        },
+        {
+            "name": "Robert Nelson",
+            "born_year": "2006-02-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                45,
+                68,
+                70,
+                14,
+                16,
+                25
+            ],
+            "average_grade": 39.67
+        },
+        {
+            "name": "Laura Adams",
+            "born_year": "2006-07-16",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                42,
+                48,
+                69,
+                2,
+                3,
+                74
+            ],
+            "average_grade": 39.67
+        },
+        {
+            "name": "Sandra Davis",
+            "born_year": "2006-02-08",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                15,
+                67,
+                78,
+                62,
+                2
+            ],
+            "average_grade": 39.5
+        },
+        {
+            "name": "Lisa Martinez",
+            "born_year": "2006-02-01",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                63,
+                59,
+                63,
+                6,
+                24,
+                21
+            ],
+            "average_grade": 39.33
+        },
+        {
+            "name": "Deborah Johnson",
+            "born_year": "2006-04-27",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                90,
+                81,
+                2,
+                57,
+                3,
+                3
+            ],
+            "average_grade": 39.33
+        },
+        {
+            "name": "William Nelson",
+            "born_year": "2006-04-03",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                23,
+                39,
+                19,
+                50,
+                91,
+                13
+            ],
+            "average_grade": 39.17
+        },
+        {
+            "name": "Deborah Miller",
+            "born_year": "2006-07-01",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                40,
+                6,
+                67,
+                10,
+                92,
+                13
+            ],
+            "average_grade": 38.0
+        },
+        {
+            "name": "Deborah Mitchell",
+            "born_year": "2006-04-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                86,
+                25,
+                21,
+                60,
+                3,
+                31
+            ],
+            "average_grade": 37.67
+        },
+        {
+            "name": "James Jones",
+            "born_year": "2006-06-17",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                20,
+                97,
+                10,
+                56,
+                9,
+                30
+            ],
+            "average_grade": 37.0
+        },
+        {
+            "name": "Jonh Martinez",
+            "born_year": "2006-04-08",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                25,
+                40,
+                26,
+                59,
+                40,
+                31
+            ],
+            "average_grade": 36.83
+        },
+        {
+            "name": "Jonh Nelson",
+            "born_year": "2006-05-29",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                32,
+                23,
+                48,
+                1,
+                95,
+                22
+            ],
+            "average_grade": 36.83
+        },
+        {
+            "name": "Joseph Martin",
+            "born_year": "2006-02-07",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                72,
+                20,
+                13,
+                57,
+                45
+            ],
+            "average_grade": 36.67
+        },
+        {
+            "name": "Laura Brown",
+            "born_year": "2006-07-04",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                43,
+                40,
+                36,
+                40,
+                41,
+                14
+            ],
+            "average_grade": 35.67
+        },
+        {
+            "name": "Joseph Williams",
+            "born_year": "2006-03-21",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                23,
+                34,
+                60,
+                11,
+                29,
+                56
+            ],
+            "average_grade": 35.5
+        },
+        {
+            "name": "Joseph Adams",
+            "born_year": "2006-05-02",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                98,
+                0,
+                17,
+                23,
+                63,
+                11
+            ],
+            "average_grade": 35.33
+        },
+        {
+            "name": "Jonh Adams",
+            "born_year": "2006-05-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                86,
+                36,
+                20,
+                10,
+                42,
+                12
+            ],
+            "average_grade": 34.33
+        },
+        {
+            "name": "James Moore",
+            "born_year": "2006-01-24",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                4,
+                21,
+                1,
+                40,
+                81,
+                58
+            ],
+            "average_grade": 34.17
+        },
+        {
+            "name": "Richard Brown",
+            "born_year": "2006-05-31",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                21,
+                21,
+                24,
+                10,
+                74,
+                45
+            ],
+            "average_grade": 32.5
+        },
+        {
+            "name": "James Lopez",
+            "born_year": "2006-07-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                53,
+                32,
+                6,
+                5,
+                50,
+                47
+            ],
+            "average_grade": 32.17
+        },
+        {
+            "name": "William Mitchell",
+            "born_year": "2006-04-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                17,
+                7,
+                4,
+                83,
+                38,
+                42
+            ],
+            "average_grade": 31.83
+        },
+        {
+            "name": "Julia Mitchell",
+            "born_year": "2006-02-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                98,
+                31,
+                8,
+                28,
+                18,
+                7
+            ],
+            "average_grade": 31.67
+        },
+        {
+            "name": "Michal Adams",
+            "born_year": "2006-02-13",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                10,
+                29,
+                65,
+                10,
+                3,
+                72
+            ],
+            "average_grade": 31.5
+        },
+        {
+            "name": "Joseph Mitchell",
+            "born_year": "2006-02-15",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                14,
+                4,
+                53,
+                55,
+                46,
+                15
+            ],
+            "average_grade": 31.17
+        },
+        {
+            "name": "William Miller",
+            "born_year": "2006-02-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                38,
+                3,
+                4,
+                0,
+                58,
+                83
+            ],
+            "average_grade": 31.0
+        },
+        {
+            "name": "Deborah Nelson",
+            "born_year": "2006-05-12",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                26,
+                12,
+                74,
+                20,
+                5,
+                40
+            ],
+            "average_grade": 29.5
+        },
+        {
+            "name": "Lisa Brown",
+            "born_year": "2006-04-07",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                32,
+                52,
+                45,
+                15,
+                11,
+                21
+            ],
+            "average_grade": 29.33
+        },
+        {
+            "name": "Jonh Adams",
+            "born_year": "2006-01-09",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                50,
+                15,
+                5,
+                6,
+                50,
+                48
+            ],
+            "average_grade": 29.0
+        },
+        {
+            "name": "James Smith",
+            "born_year": "2006-05-06",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                74,
+                40,
+                13,
+                0,
+                1,
+                41
+            ],
+            "average_grade": 28.17
+        },
+        {
+            "name": "Linda Miller",
+            "born_year": "2006-01-08",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                6,
+                38,
+                20,
+                32,
+                39,
+                33
+            ],
+            "average_grade": 28.0
+        },
+        {
+            "name": "Linda Williams",
+            "born_year": "2006-01-25",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                95,
+                5,
+                1,
+                6,
+                29,
+                22
+            ],
+            "average_grade": 26.33
+        },
+        {
+            "name": "James Nelson",
+            "born_year": "2006-02-18",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                10,
+                30,
+                5,
+                33,
+                23,
+                54
+            ],
+            "average_grade": 25.83
+        },
+        {
+            "name": "Michal Johnson",
+            "born_year": "2006-04-30",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                10,
+                22,
+                15,
+                61,
+                34
+            ],
+            "average_grade": 25.83
+        },
+        {
+            "name": "Michal Smith",
+            "born_year": "2006-03-19",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                9,
+                13,
+                69,
+                22,
+                23,
+                17
+            ],
+            "average_grade": 25.5
+        },
+        {
+            "name": "Michal Williams",
+            "born_year": "2006-03-24",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                13,
+                4,
+                33,
+                37,
+                23,
+                40
+            ],
+            "average_grade": 25.0
+        },
+        {
+            "name": "Robert Brown",
+            "born_year": "2006-01-26",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                15,
+                10,
+                12,
+                40,
+                30,
+                43
+            ],
+            "average_grade": 25.0
+        },
+        {
+            "name": "William Smith",
+            "born_year": "2006-05-28",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                29,
+                16,
+                55,
+                40,
+                5,
+                0
+            ],
+            "average_grade": 24.17
+        },
+        {
+            "name": "Joseph Smith",
+            "born_year": "2006-03-22",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                8,
+                25,
+                26,
+                5,
+                56,
+                25
+            ],
+            "average_grade": 24.17
+        },
+        {
+            "name": "William Johnson",
+            "born_year": "2006-06-30",
+            "application_year": "2025-04-09",
+            "graduation_year": "2029-01-03",
+            "scholarship": "Unrated",
+            "grades": [
+                32,
+                6,
+                1,
+                7,
+                9,
+                46
+            ],
+            "average_grade": 16.83
+        }
+    ]
+}
