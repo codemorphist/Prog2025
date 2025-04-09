@@ -44,7 +44,7 @@ class Path:
 
         # Fixed bug when for path("test/", ...)
         # test/ and testtest/ both return True
-        self.regex_pattern = f"^{self.regex_pattern}"
+        self.regex_pattern = f"^{self.regex_pattern}$"
 
     def construct_pattern(self):
         self.url_pattern = "/" + re.sub(Path.PARAM_PATTERN, 
