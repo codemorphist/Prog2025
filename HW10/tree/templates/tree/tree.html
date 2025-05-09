@@ -1,0 +1,36 @@
+{% extends 'tree/base.html' %}
+
+{% block title %}Tree {{ tree.name }}{% endblock %}
+
+{% block content %}
+
+<div>
+    <h1>{{ tree.name }}</h1>
+    <ul>
+        <li><b>Family:</b> <a href="{{ tree.family.get_absolute_url }}">{{ tree.sort.family.name }}</a></li>
+        <li><b>Sort:</b> <a href="{{ tree.sort.get_absolute_url }}">{{ tree.sort.name }}</a></li>
+        <li><b>Planting date:</b> {{ tree.planting_date }}</li>
+        <li><b>Planting place:</b> <a href="{{ tree.planting_place.get_absolute_url }}">{{ tree.planting_place }}</a></li>
+    </ul>
+
+    {% if harvest %}
+    <table>
+        <thead>
+            <th>Year</th>
+            <th>Weight (kg)</th>
+        </thead>
+        <tbody>
+            {% for h in harvest %}
+            <tr>
+                <td>{{ h.year }}</td>
+                <td>{{ h.weight }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <span>No harvest data found</span>
+    {% endif %}
+</div> 
+
+{% endblock %}

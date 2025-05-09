@@ -1,0 +1,13 @@
+{% extends 'tree/base.html' %}
+
+{% block title %}Add harvest{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><input type="submit" value="Add harvest"></p>
+</form> 
+
+{% endblock %}
