@@ -1,7 +1,7 @@
 import unittest
 from random import choice, uniform
 
-from t30_1 import *
+from t30_1a import *
 
 
 class TestTaylorSum(unittest.TestCase):
