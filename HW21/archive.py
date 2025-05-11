@@ -1,5 +1,5 @@
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 import tarfile
 
 from config import JOURNAL_DIR, LOG_DATE_FORMAT
