@@ -3,12 +3,12 @@ import random
 import time
 import os
 
-from config import JOURNAL_DIR
+from config import JOURNAL_DIR, LOG_DATE_FORMAT
 
 
 
 def write_log():
-    timestamp = datetime.now().strftime("%X-%d-%m-%Y%z")
+    timestamp = datetime.now().strftime(LOG_DATE_FORMAT)
     log_file = os.path.join(JOURNAL_DIR, f"{timestamp}.txt")
     with open(log_file, "w") as f:
         for _ in range(random.randint(1, 10)):
