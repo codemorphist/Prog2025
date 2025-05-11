@@ -1,0 +1,1 @@
+JOURNAL_DIR = "logs/"
