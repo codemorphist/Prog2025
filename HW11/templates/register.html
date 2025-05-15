@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Реєстрація гостя</title>
+</head>
+<body>
+    <h1>Реєстрація гостя</h1>
+    <form method="POST">
+        <label>Прізвище:</label><br>
+        <input type="text" name="name" required><br>
+        <label>Рік народження:</label><br>
+        <input type="text" name="byear" required><br>
+        <label>Тип номера:</label><br>
+        <select name="room_type_id">
+            {% for room in rooms %}
+                <option value="{{ room[0] }}">{{ room[1] }} ({{ room[2] }} грн/доба)</option>
+            {% endfor %}
+        </select><br>
+        <label>Кількість діб:</label><br>
+        <input type="number" name="nights" min="1" required><br><br>
+        <input type="submit" value="Зареєструвати">
+    </form>
+</body>
+</html>
+

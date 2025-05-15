@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Список гостей</title>
+</head>
+<body>
+    <h1>Список гостей</h1>
+    <table border="1">
+        <tr>
+            <th>Прізвище</th>
+            <th>Рік нар.</th>
+            <th>Тип номера</th>
+            <th>Діб</th>
+            <th>Ціна за добу</th>
+            <th>Загальна плата</th>
+        </tr>
+        {% for guest in guests %}
+        <tr>
+            <td>{{ guest.name }}</td>
+            <td>{{ guest.byear }}</td>
+            <td>{{ guest.room }}</td>
+            <td>{{ guest.nights }}</td>
+            <td>{{ guest.rate }} грн</td>
+            <td>{{ guest.total }} грн</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
